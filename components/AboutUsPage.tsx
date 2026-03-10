@@ -1,5 +1,6 @@
 import AboutUsSection from './AboutUsSection'
 import HowItWorksSection from './HowItWorksSection';
+import TeamSection from './TeamSection';
 import VisionMissionSection from './VisionMissionSection'
 import { Clock, Award } from "lucide-react";
 const AboutUsPage = () => {
@@ -74,6 +75,7 @@ const AboutUsPage = () => {
     </section>
 
     <HowItWorksSection/>
+    <TeamSection/>
 
     </div>
   )

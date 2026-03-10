@@ -65,7 +65,7 @@ const HowItWorksSection = () => {
                 </svg>
               ) : index < steps.length - 1 && (
                 <svg className="mt-20 ms-4" width="76" height="34" viewBox="0 0 76 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.251953 29.4649C15.4305 33.9292 50.0734 36.4292 67.2162 10.7149" stroke="#7B7B7B" stroke-width="1.78571"/>
+                    <path d="M0.251953 29.4649C15.4305 33.9292 50.0734 36.4292 67.2162 10.7149" stroke="#7B7B7B" strokeWidth="1.78571"/>
                     <path d="M73.4663 16.0715L60.9663 6.2501L75.252 0.000104904L73.4663 16.0715Z" fill="#7B7B7B"/>
                 </svg>
 
