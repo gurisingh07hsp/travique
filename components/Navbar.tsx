@@ -1,0 +1,92 @@
+'use client'
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+const navLinks = ["Home", "About Us", "Services", "Blogs"];
+
+const Navbar = () => {
+    const [mobileOpen, setMobileOpen] = useState(false);
+  return (
+     <nav className="w-full max-w-7xl mx-auto bg-background">
+      <div className="container mx-auto flex items-center justify-between py-4 px-4">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img src='/logo.png' alt="Travique logo" className="h-8 w-8" />
+          <span className="text-xl font-bold text-foreground tracking-tight">Travique</span>
+        </div>
+
+        {/* Desktop Links */}
+        <ul className="hidden md:flex items-center gap-8">
+          <li>
+            <Link
+              href="/"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="about"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="services"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="Blogs"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Blogs
+            </Link>
+          </li>
+        </ul>
+
+        {/* CTA */}
+        <div className="hidden md:block">
+          <button className="rounded-full px-4 py-2 bg-[#F1AC32] text-white hover:opacity-90 transition-opacity">
+            Contact Us
+          </button>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-border px-4 pb-4">
+          <ul className="flex flex-col gap-4 pt-4">
+            {navLinks.map((link) => (
+              <li key={link}>
+                <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <button className="mt-4 w-full rounded-full bg-main text-white">
+            Contact Us
+          </button>
+        </div>
+      )}
+    </nav>
+  )
+}
+
+export default Navbar
