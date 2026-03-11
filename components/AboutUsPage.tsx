@@ -5,19 +5,19 @@ import VisionMissionSection from './VisionMissionSection'
 import { Clock, Award } from "lucide-react";
 const AboutUsPage = () => {
   return (
-    <div>
+    <div className='mx-2'>
       <AboutUsSection/>
       <VisionMissionSection/>
         <section className="w-full py-20 bg-background">
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* Left – Founder Image */}
-          <div className="rounded-3xl overflow-hidden bg-[#b2a4a4] aspect-4/5 max-w-sm">
-            {/* <img
-              src={founderImg}
+          <div className="rounded-3xl overflow-hidden aspect-4/5 max-w-sm">
+            <img
+              src={'/FounderImage.png'}
               alt="Timothy T. Wood, Founder & CEO"
               className="w-full h-full object-cover"
-            /> */}
+            />
           </div>
 
           {/* Right – Content */}
@@ -45,7 +45,7 @@ const AboutUsPage = () => {
             </div>
 
             {/* Feature badges */}
-            <div className="flex gap-6">
+            <div className="flex flex-col md:flex-row gap-6">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                   <Clock size={18} className="text-primary-foreground" />

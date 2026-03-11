@@ -12,16 +12,13 @@ const tabs = [
 const BookingSearchSection = () => {
     const [activeTab, setActiveTab] = useState("Hotel");
   return (
-      <section className="w-full relative py-10 bg-background">
+      <section className="w-full md:relative py-10 flex flex-col md:flex-row justify-center gap-2">
+        <img src="/BookingSearchImage.png" alt="booking Image" className="md:max-w-7xl" />
 
-        <div className="bg-gray-600 md:max-w-6xl h-96 mx-auto">
-
-        </div>
-
-      <div className="md:max-w-4xl w-full  absolute bottom-0.5 lg:left-80 mx-auto px-4">
-        <div className="bg-card rounded-2xl shadow-lg bg-white border border-border p-6">
+      <div className="md:max-w-4xl w-full  md:absolute bottom-0.5 mx-auto px-4 opacity-95">
+        <div className="bg-card rounded-2xl shadow-lg bg-white p-6">
           {/* Tabs */}
-          <div className="flex flex-wrap gap-2 mb-6 border-b border-gray-300">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6 border-b border-gray-300">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               return (
@@ -45,25 +42,25 @@ const BookingSearchSection = () => {
           <div className="grid grid-cols-2 text-gray-400 md:grid-cols-5 gap-4 items-end">
             <div className="flex flex-col gap-1">
               <label className="text-xs text-muted-foreground">Destination</label>
-              <div className="bg-muted rounded-full px-4 py-2.5 text-sm text-black">
+              <div className="bg-muted rounded-full px-4 py-2.5 md:text-sm text-xs text-black">
                 Bali, Indonesia
               </div>
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-xs text-muted-foreground">Check-in</label>
-              <div className="bg-muted rounded-full px-4 py-2.5 text-sm text-black">
+              <div className="bg-muted rounded-full px-4 py-2.5 md:text-sm text-xs text-black">
                 Mon, 23 Nov 2024
               </div>
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-xs text-muted-foreground">Checkout</label>
-              <div className="bg-muted rounded-full px-4 py-2.5 text-sm text-black">
+              <div className="bg-muted rounded-full px-4 py-2.5 md:text-sm text-xs text-black">
                 Wed, 25 Nov 2024
               </div>
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-xs text-muted-foreground">Guests</label>
-              <div className="bg-muted rounded-full px-4 py-2.5 text-sm text-black">
+              <div className="bg-muted rounded-full px-4 py-2.5 md:text-sm text-xs text-black">
                 2 Guests
               </div>
             </div>

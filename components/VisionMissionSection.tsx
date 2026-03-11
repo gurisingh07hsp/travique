@@ -24,7 +24,7 @@ const VisionMissionSection = () => {
               Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu
               arcu massa laoreet commodo ac. Fermentum luctus convallis.
             </p>
-            <div className="flex gap-10">
+            <div className="flex md:gap-10 gap-5">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="text-3xl font-extrabold">{stat.value}</p>
@@ -35,7 +35,7 @@ const VisionMissionSection = () => {
           </div>
 
           {/* Right – Our Vision card */}
-          <div className="bg-white text-black mt-12 rounded-2xl p-8 max-w-sm ml-auto">
+          <div className="bg-white text-black md:mt-12 mb-6 rounded-2xl p-8 max-w-sm ml-auto">
             <h3 className="text-xl font-bold mb-4">Our Vision</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               To be the leading provider of online transportation services that transforms the

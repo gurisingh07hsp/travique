@@ -12,9 +12,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-   <div>
+   <div className="overflow-hidden mx-2">
       <HeroSection/>
-      <BrandSection/>
+      {/* <BrandSection/> */}
       <AboutUsSection/>
       <ServicesSection/>
       <BookingSearchSection/>

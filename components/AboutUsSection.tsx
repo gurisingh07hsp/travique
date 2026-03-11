@@ -11,15 +11,15 @@ const AboutUsSection = () => {
       <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div className="rounded-3xl overflow-hidden aspect-square bg-muted">
-          {/* <img
-            src={aboutImg}
+          <img
+            src={'/aboutUsImage.png'}
             alt="Travel experience"
             className="w-full h-full object-cover"
-          /> */}
+          />
 
-          <div className="w-full h-full bg-[#d2cbcb]">
+          {/* <div className="w-full h-full bg-[#d2cbcb]">
 
-          </div>
+          </div> */}
         </div>
 
         {/* Right Content */}

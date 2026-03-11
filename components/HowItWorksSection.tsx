@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <div key={index} className="flex text-center px-4">
 
-                <div className={`flex flex-col items-center ${index%2 != 0 && 'mt-20'}`}>
+                <div className={`flex flex-col items-center ${index%2 != 0 && 'lg:mt-20'}`}>
                     {/* Icon circle */}
                     <div className="w-16 h-16 rounded-full bg-blue-200 flex items-center justify-center mb-5">
                     <step.icon className="w-7 h-7 text-blue-600" />
@@ -59,12 +59,12 @@ const HowItWorksSection = () => {
                 </div>
                               {/* Curved arrow connector */}
               {index < steps.length - 1 && index%2 == 0 ? (
-                <svg className="mt-8 ms-4" width="76" height="34" viewBox="0 0 76 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="mt-8 ms-4 hidden lg:block" width="76" height="34" viewBox="0 0 76 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.251953 3.73406C15.4305 -0.730229 50.0734 -3.23023 67.2162 22.4841" stroke="#7B7B7B" strokeWidth="1.78571"/>
                     <path d="M73.4663 17.1274L60.9663 26.9489L75.252 33.1989L73.4663 17.1274Z" fill="#7B7B7B"/>
                 </svg>
               ) : index < steps.length - 1 && (
-                <svg className="mt-20 ms-4" width="76" height="34" viewBox="0 0 76 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="mt-20 ms-4 hidden lg:block" width="76" height="34" viewBox="0 0 76 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.251953 29.4649C15.4305 33.9292 50.0734 36.4292 67.2162 10.7149" stroke="#7B7B7B" strokeWidth="1.78571"/>
                     <path d="M73.4663 16.0715L60.9663 6.2501L75.252 0.000104904L73.4663 16.0715Z" fill="#7B7B7B"/>
                 </svg>
