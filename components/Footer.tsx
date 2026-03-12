@@ -13,18 +13,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image src={'/logo.png'} alt="Logo" width={36} height={36}></Image>
-            {/* <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="36" height="36" rx="8" fill="#F5A623" fillOpacity="0.15" />
-              <path
-                d="M18 6C13.0294 6 9 10.0294 9 15C9 21.75 18 30 18 30C18 30 27 21.75 27 15C27 10.0294 22.9706 6 18 6Z"
-                fill="#F5A623"
-              />
-              <path
-                d="M18 10L14 18H22L18 10Z"
-                fill="white"
-              />
-            </svg> */}
-            <span className="text-xl font-bold text-gray-900 tracking-tight">Travique</span>
+            <span className="text-xl font-bold text-gray-900 tracking-tight">Milky Ways Tours</span>
           </div>
 
           <p className="text-gray-400 text-sm leading-relaxed max-w-50">

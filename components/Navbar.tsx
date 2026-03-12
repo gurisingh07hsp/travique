@@ -11,7 +11,7 @@ const Navbar = () => {
         {/* Logo */}
         <button className="flex items-center gap-2">
           <img src='/logo.png' alt="Travique logo" className="h-8 w-8" />
-          <span className="text-xl font-bold text-foreground tracking-tight">Travique</span>
+          <span className="text-xl font-bold text-foreground tracking-tight">Milky Ways Tours</span>
         </button>
 
 
@@ -43,7 +43,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="Blogs"
+              href="blogs"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Blogs

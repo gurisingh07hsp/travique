@@ -5,7 +5,7 @@ import React from 'react'
 const HeroSection = () => {
   return (
     <section className="w-full">
-      <div className="relative w-full min-h-125 md:min-h-150 lg:min-h-170 rounded-2xl overflow-hidden md:mx-auto max-w-350 px-4 pt-4">
+      <div className="relative w-full min-h-90 md:min-h-150 lg:min-h-170 rounded-2xl overflow-hidden md:mx-auto max-w-350 px-4 pt-4">
         {/* Background Image */}
         <div className="absolute inset-0 rounded-2xl overflow-hidden">
           <img
@@ -16,13 +16,9 @@ const HeroSection = () => {
         </div>
 
         {/* Content Overlay */}
-        <div className="relative z-10 flex flex-col justify-between h-full min-h-125 md:min-h-150 lg:min-h-170 p-8 md:p-12 lg:p-16">
+        <div className="relative z-10 flex flex-col justify-between h-full min-h-80 md:min-h-150 lg:min-h-170 p-4 md:p-12 lg:p-16">
           {/* Top Content */}
-          <div className="flex-1 flex flex-col justify-center max-w-lg">
-            {/* Step indicators */}
-            <div className="flex flex-col items-start gap-2 mb-6">
-              <div className="w-5 h-5 rounded-full bg-white" />
-            </div>
+          <div className="flex-1 flex flex-col md:justify-center max-w-lg">
 
             {/* Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-4">
@@ -51,11 +47,11 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex items-center gap-4 ">
+            <div className="flex items-center gap-4 mt-4">
               <button className="bg-white text-foreground rounded-full px-7 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
                 Start Your Journey
               </button>
-              <button className="w-11 h-11 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/30 transition-colors">
+              <button className="w-11 h-11 hidden rounded-full bg-white/20 backdrop-blur-sm text-white md:flex items-center justify-center hover:bg-white/30 transition-colors">
                 <PlayCircle size={20} />
               </button>
             </div>
