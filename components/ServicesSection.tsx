@@ -46,7 +46,7 @@ const ServicesSection = () => {
                   {service.price}
                   <span className="text-xs font-normal opacity-80">/person</span>
                 </span>
-                <a href="#" className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
+                <a href={`${service.title.replace(/\s+/, '-')}`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
                   Book Now
                   <ChevronRight size={14} />
                 </a>

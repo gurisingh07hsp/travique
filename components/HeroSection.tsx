@@ -5,18 +5,18 @@ import React from 'react'
 const HeroSection = () => {
   return (
     <section className="w-full">
-      <div className="relative w-full min-h-90 md:min-h-150 lg:min-h-170 rounded-2xl overflow-hidden md:mx-auto max-w-350 px-4 pt-4">
+      <div className="relative w-full min-h-90 md:min-h-150 lg:min-h-170 rounded-2xl overflow-hidden md:mx-auto max-w-350 md:px-4 pt-4">
         {/* Background Image */}
         <div className="absolute inset-0 rounded-2xl overflow-hidden">
           <img
             src={'/HeroImage.png'}
             alt="Travel suitcase with globe and airplane"
-            className="w-full h-full md:object-contain"
+            className="w-full h-full lg:object-contain"
           />
         </div>
 
         {/* Content Overlay */}
-        <div className="relative z-10 flex flex-col justify-between h-full min-h-80 md:min-h-150 lg:min-h-170 p-4 md:p-12 lg:p-16">
+        <div className="relative z-10 flex flex-col justify-between h-full min-h-90 md:min-h-150 lg:min-h-170 ps-2 md:ps-0 md:p-12 lg:p-16">
           {/* Top Content */}
           <div className="flex-1 flex flex-col md:justify-center max-w-lg">
 
@@ -58,19 +58,19 @@ const HeroSection = () => {
           </div>
 
           {/* Bottom Right Stats */}
-          <div className="self-end absolute bottom-8 mr-8 hidden md:block">
-            <div className="rounded-t-lg px-6 py-4 flex gap-2">
-              <span className="text-2xl md:text-6xl font-bold text-foreground">22</span>
-              <span className="text-2xl md:text-6xl font-bold text-foreground">+</span>
+          <div className="self-end w-20 md:w-28 lg:w-65 absolute bottom-0 md:bottom-8 md:mr-8">
+            <div className="rounded-t-lg md:px-6 md:py-4 flex md:gap-2">
+              <span className="text-sm md:text-4xl lg:text-6xl font-bold text-foreground">22</span>
+              <span className="text-sm md:text-4xl lg:text-6xl font-bold text-foreground">+</span>
               <div className="ml-2 text-xs text-muted-foreground leading-tight">
-                <p className="text-lg text-foreground">Years of</p>
-                <p className="text-lg text-foreground">Experience</p>
+                <p className="md:text-lg text-foreground">Years of</p>
+                <p className="md:text-lg text-foreground">Experience</p>
               </div>
             </div>
-            <div className="bg-background border-b border-border ms-8 py-3">
+            <div className="bg-background border-b border-border md:ms-8 py-3">
               <a
                 href="#"
-                className="flex items-center gap-2 font-bold text-foreground hover:opacity-70 transition-opacity"
+                className="text-xs md:text-sm flex items-center md:gap-2 font-bold text-foreground hover:opacity-70 transition-opacity"
               >
                 Explore More
                 <ArrowRight size={16} />

@@ -61,9 +61,9 @@ const Navbar = () => {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <button className="rounded-full px-4 py-2 bg-[#F1AC32] text-white hover:opacity-90 transition-opacity">
+          <Link href={'book-now'} className="rounded-full cursor-pointer px-4 py-2 bg-[#F1AC32] text-white hover:opacity-90 transition-opacity">
             Book Now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -81,34 +81,34 @@ const Navbar = () => {
         <div className="md:hidden border-t border-border px-4 pb-4">
           <ul className="flex flex-col gap-4 pt-4">
               <li>
-                <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="about" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="about" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="services" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="services" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="blogs" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="blogs" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link href="contact" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="contact" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Contact Us
                 </Link>
               </li>
           </ul>
-          <button className="mt-4 w-full rounded-full bg-main text-white">
+          <Link href={'book-now'} className="mt-4 w-full rounded-full bg-main text-white">
             Book Now
-          </button>
+          </Link>
         </div>
       )}
     </nav>

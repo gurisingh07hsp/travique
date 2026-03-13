@@ -3,14 +3,14 @@ import { useState } from "react";
 import { Search, Hotel, Plane, Bus, Palmtree } from "lucide-react";
 
 const tabs = [
-  { label: "Hotel", icon: Hotel },
-  { label: "Flight", icon: Plane },
-  { label: "Bus & Train", icon: Bus },
+  // { label: "Hotel", icon: Hotel },
+  // { label: "Flight", icon: Plane },
+  // { label: "Bus & Train", icon: Bus },
   { label: "Holiday", icon: Palmtree },
 ];
 
 const BookingSearchSection = () => {
-    const [activeTab, setActiveTab] = useState("Hotel");
+    const [activeTab, setActiveTab] = useState("Holiday");
   return (
       <section className="w-full md:relative py-10 flex flex-col md:flex-row justify-center gap-2">
         <img src="/BookingSearchImage.png" alt="booking Image" className="md:max-w-7xl" />
