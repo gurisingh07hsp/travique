@@ -1,7 +1,9 @@
 "use client";
- 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
+import axios from "axios";
+import { ToursType } from "@/types/types";
 function StarIcon({ filled }: { filled: boolean }) {
   return (
     <svg viewBox="0 0 20 20" className={`w-5 h-5 ${filled ? "text-amber-400" : "text-gray-300"}`} fill="currentColor">
@@ -99,8 +101,26 @@ const reviews = [
 ];
 const PackageDetail = () => {
     const router = useRouter();
+    const {locationPackageName} = useParams();
+    const [tour, setTour] = useState<ToursType | null>(null);
     const [activeTab, setActiveTab] = useState<"overview" | "itinerary" | "includes" | "reviews">("overview");
     const [activeImage, setActiveImage] = useState(0);
+
+    const getTour = async()=> {
+      try{
+        const response = await axios.get(`/api/tours/${locationPackageName?.toString().replace('-',' ')}`);
+        if(response.status == 200){
+          setTour(response.data.tour);
+          console.log('tour : ', response.data.tour);
+        }
+      }catch(error){
+        console.log(error);
+      }
+    } 
+    useEffect(()=>{
+      getTour();
+    },[])
+
   return (
      <div className="min-h-screen font-sans">
       <style>{`
@@ -119,8 +139,8 @@ const PackageDetail = () => {
           {/* Hero Image */}
           <div className="relative rounded-3xl overflow-hidden mb-4 group">
             <img
-              src={gallery[activeImage]}
-              alt="Bali"
+              src={tour?.image}
+              alt={tour?.title}
               className="w-full h-105 object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 from-black/30 to-transparent" />
@@ -129,28 +149,28 @@ const PackageDetail = () => {
  
           {/* Stars & Meta */}
           <div className="mb-3">
-            <div className="flex items-center gap-2 mb-2">
+            {/* <div className="flex items-center gap-2 mb-2">
               {[1,2,3,4,5].map(i => <StarIcon key={i} filled={i <= 4} />)}
               <span className="text-amber-500 font-bold text-sm">(4,8/5)</span>
               <span className="text-gray-400 text-sm ml-1">· 128 reviews</span>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2 text-gray-500 text-sm flex-wrap">
-              <span className="font-semibold text-gray-700">Indonesia</span>
+              <span className="font-semibold text-gray-700">{tour?.country}</span>
               <span className="w-1.5 h-1.5 rounded-full bg-gray-400" />
-              <span>From <strong className="text-gray-800">$742/adult</strong></span>
+              <span>From <strong className="text-gray-800">${tour?.price}</strong></span>
               <span className="w-1.5 h-1.5 rounded-full bg-gray-400" />
-              <span>4 Days 3 Night</span>
+              <span>{tour?.duration}</span>
             </div>
           </div>
  
           {/* Title */}
           <h1 style={{fontFamily:"'Playfair Display',Georgia,serif"}} className="font-bold text-4xl md:text-5xl text-[#1a1a1a] leading-tight mb-5">
-            Bali Package Tour Overview
+            {tour?.title}
           </h1>
  
           {/* Tabs */}
           <div className="flex border-b border-gray-200 mb-7 overflow-x-auto">
-            {(["overview", "reviews"] as const).map((tab) => (
+            {(["overview"] as const).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -168,7 +188,8 @@ const PackageDetail = () => {
           {/* Tab: Overview */}
           {activeTab === "overview" && (
             <div>
-              <p className="text-gray-600 leading-relaxed mb-4 text-[15px]">
+              <p>{tour?.description}</p>
+              {/* <p className="text-gray-600 leading-relaxed mb-4 text-[15px]">
                 Fugiat velit. Sint consequat dolor sunt exercitation curae, sollicitudin sagittis, proident cursus, aliquam, esse sociosqu, euismod quam quasi officiis cupidatat possimus ultricies viverra viverra, eaque perferendis! Nonummy cumque vestibulum reprehenderit. Orci numquam nulla ut, minus.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4 text-[15px]">
@@ -176,24 +197,7 @@ const PackageDetail = () => {
               </p>
               <p className="text-gray-600 leading-relaxed text-[15px]">
                 Whether you're seeking spiritual rejuvenation or simply an escape into nature's paradise, this package delivers an unforgettable Balinese experience with hand-picked restaurants, hidden gems, and cultural performances that most visitors never discover.
-              </p>
- 
-              {/* <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  { emoji: "🏛️", title: "4 UNESCO Heritage Sites", sub: "Temples & cultural landmarks" },
-                  { emoji: "🏖️", title: "Private Beach Access", sub: "Sunrise & sunset sessions" },
-                  { emoji: "🍜", title: "Authentic Cuisine", sub: "Local & fine dining included" },
-                  { emoji: "🚗", title: "Private AC Transfers", sub: "Door-to-door comfort" },
-                ].map((h) => (
-                  <div key={h.title} className="flex items-center gap-4 bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                    <span className="text-3xl">{h.emoji}</span>
-                    <div>
-                      <p className="font-semibold text-gray-800 text-sm">{h.title}</p>
-                      <p className="text-gray-400 text-xs">{h.sub}</p>
-                    </div>
-                  </div>
-                ))}
-              </div> */}
+              </p> */}
             </div>
           )}
  
@@ -309,9 +313,9 @@ const PackageDetail = () => {
               </span>
             </div>
  
-            <p className="text-gray-400 text-sm text-center leading-relaxed mb-7">
+            {/* <p className="text-gray-400 text-sm text-center leading-relaxed mb-7">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.
-            </p>
+            </p> */}
  
             <div className="space-y-5">
               {/* Location */}
@@ -321,7 +325,7 @@ const PackageDetail = () => {
                 </div>
                 <div>
                   <p className="txt-main text-sm font-semibold">Location:</p>
-                  <p className="text-gray-300 text-sm">Bali, Indonesia</p>
+                  <p className="text-gray-300 text-sm">{tour?.location}</p>
                 </div>
               </div>
  
@@ -347,7 +351,7 @@ const PackageDetail = () => {
                 </div>
                 <div>
                   <p className="txt-main text-sm font-semibold">Tour Price</p>
-                  <p className="text-gray-300 text-sm">Starting From : <strong className="text-white">$380</strong></p>
+                  <p className="text-gray-300 text-sm">Starting From : <strong className="text-white">${tour?.price}</strong></p>
                 </div>
               </div>
             </div>
