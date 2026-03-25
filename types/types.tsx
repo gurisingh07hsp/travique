@@ -12,3 +12,20 @@ export interface ToursType {
   rating: number;
   createdAt: Date;
 }
+
+export interface BookingsType {
+  _id: string,
+  name: string,
+  email: string,
+  phone: string,
+  nationality: string,
+  passportNo: string,
+  destination: string,
+  departureDate: Date,
+  returnDate: Date,
+  adults: number,
+  children: number,
+  specialRequests: string,
+  payment: 'pending'|'done',
+  createdAt: Date,
+}

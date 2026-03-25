@@ -22,13 +22,13 @@ import {
 
 const navItems = [
   { title: "Dashboard", path: "/admin", icon: LayoutDashboard },
-  { title: "Bookings", path: "/admin/bookings", icon: CalendarCheck },
-  { title: "Customers", path: "/admin/customers", icon: Users },
   { title: "Tour Packages", path: "/admin/packages", icon: MapPin },
+  { title: "Bookings", path: "/admin/bookings", icon: CalendarCheck },
+  // { title: "Customers", path: "/admin/customers", icon: Users },
   { title: "Blog Posts", path: "/admin/blog", icon: FileText },
-  { title: "Messages", path: "/admin/messages", icon: MessageSquare },
-  { title: "Analytics", path: "/admin/analytics", icon: BarChart3 },
-  { title: "Settings", path: "/admin/settings", icon: Settings },
+  // { title: "Messages", path: "/admin/messages", icon: MessageSquare },
+  // { title: "Analytics", path: "/admin/analytics", icon: BarChart3 },
+  // { title: "Settings", path: "/admin/settings", icon: Settings },
 ];
 
 export default function AdminLayout({

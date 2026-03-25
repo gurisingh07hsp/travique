@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import {
   CalendarIcon,
@@ -16,6 +16,8 @@ import {
   Hotel,
   CheckCircle2,
 } from "lucide-react";
+import axios from "axios";
+import { ToursType } from "@/types/types";
 
 const destinations = [
   "Bali, Indonesia",
@@ -36,10 +38,11 @@ const packages = [
 
 const BookNow = () => {
 //   const navigate = useNavigate();
-  const searchParams = useParams();
+  const {locationPackageName} = useParams();
 //   const { toast } = useToast();
 
   const [step, setStep] = useState(1);
+  const [tour, setTour] = useState<ToursType | null>(null);
   const [departureDate, setDepartureDate] = useState<Date>();
   const [returnDate, setReturnDate] = useState<Date>();
   const [selectedPackage, setSelectedPackage] = useState("standard");
@@ -49,13 +52,14 @@ const BookNow = () => {
   console.log('steps  :', step);
 
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phone: "",
     nationality: "",
     passportNo: "",
-    destination: "",
+    destination: tour?._id,
+    departureDate: "",
+    returnDate: "",
     adults: "2",
     children: "0",
     specialRequests: "",
@@ -64,6 +68,25 @@ const BookNow = () => {
     expiry: "",
     cvv: "",
   });
+
+    const getTour = async()=> {
+      try{
+        const response = await axios.get(`/api/tours/${locationPackageName?.toString().replace('-',' ')}`);
+        if(response.status == 200){
+          setTour(response.data.tour);
+          console.log('Form data : ', response.data.tour);
+        }
+      }catch(error){
+        console.log(error);
+      }
+    } 
+    useEffect(()=>{
+      getTour();
+    },[])
+
+    useEffect(()=>{
+      setForm({...form, destination: tour?._id})
+    },[tour]);
 
   const updateForm = (field: string, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -76,15 +99,21 @@ const BookNow = () => {
   const tax = subtotal * 0.1;
   const total = subtotal + tax;
 
-//   const handleSubmit = () => {
-//     toast({
-//       title: "Booking Confirmed! 🎉",
-//       description: `Your trip to ${form.destination || "your destination"} has been booked successfully. Confirmation sent to ${form.email}.`,
-//     });
-//     setTimeout(() => navigate("/"), 3000);
-//   };
+  const handleSubmit = async() => {
+    // toast({
+    //   title: "Booking Confirmed! 🎉",
+    //   description: `Your trip to ${form.destination || "your destination"} has been booked successfully. Confirmation sent to ${form.email}.`,
+    // });
+    // setTimeout(() => navigate("/"), 3000);
 
-  const canProceedStep1 = form.firstName && form.lastName && form.email && form.phone;
+    const response = await axios.post('/api/bookings',form);
+    if(response.status == 200){
+      console.log(response.data);
+    }
+
+  };
+
+  const canProceedStep1 = form.name && form.email && form.phone;
   const canProceedStep2 = form.destination && departureDate && returnDate;
   const canProceedStep3 = agreedTerms && (paymentMethod !== "card" || (form.cardNumber && form.cardName && form.expiry && form.cvv));
 
@@ -146,15 +175,15 @@ const BookNow = () => {
                 </div>
               </div>
               <div className="space-y-6 mt-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 gap-5">
                   <div className="space-y-2 flex flex-col">
-                    <label htmlFor="firstName">First Name *</label>
-                    <input className="border py-2 px-2 rounded-lg" id="firstName" placeholder="John" value={form.firstName} onChange={(e) => updateForm("firstName", e.target.value)} />
+                    <label htmlFor="firstName">Name *</label>
+                    <input className="border py-2 px-2 rounded-lg" id="firstName" placeholder="John" value={form.name} onChange={(e) => updateForm("name", e.target.value)} />
                   </div>
-                  <div className="space-y-2 flex flex-col">
+                  {/* <div className="space-y-2 flex flex-col">
                     <label htmlFor="lastName">Last Name *</label>
                     <input className="border p-2 rounded-lg" id="lastName" placeholder="Doe" value={form.lastName} onChange={(e) => updateForm("lastName", e.target.value)} />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -208,24 +237,25 @@ const BookNow = () => {
                 </div>
               </div>
               <div className="space-y-6 mt-4">
-                <div className="space-y-2 flex flex-col">
+                {/* <div className="space-y-2 flex flex-col">
                   <label>Destination *</label>
+                  <h2>{tour?.location}</h2>
                   <select className="border py-2 px-2 rounded-lg" value={form.destination} onChange={(v) => setForm({...form, destination: v.target.value})}>
                     <option disabled value="">Select your destination</option>
                       {destinations.map((d) => (
                         <option key={d} value={d}>{d}</option>
                       ))}
                   </select>
-                </div>
+                </div> */}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2 flex flex-col">
                     <label>Departure Date *</label>
-                    <input type="date" className="border p-2 rounded-lg" />
+                    <input value={form.departureDate} onChange={(v)=> setForm({...form, departureDate: v.target.value})} type="date" className="border p-2 rounded-lg" />
                   </div>
                   <div className="space-y-2 flex flex-col">
                     <label>Return Date *</label>
-                    <input type="date" className="border p-2 rounded-lg" />
+                    <input value={form.returnDate} onChange={(v)=> setForm({...form, returnDate: v.target.value})} type="date" className="border p-2 rounded-lg" />
                   </div>
                 </div>
 
@@ -249,7 +279,7 @@ const BookNow = () => {
                 </div>
 
                 {/* Package Selection */}
-                <div className="space-y-3">
+                {/* <div className="space-y-3">
                   <label>Select Package *</label>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {packages.map((pkg) => (
@@ -278,7 +308,7 @@ const BookNow = () => {
                       </button>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 <div className="space-y-2 flex flex-col">
                   <label htmlFor="specialRequests">Special Requests</label>
@@ -287,7 +317,7 @@ const BookNow = () => {
 
                 <div className="flex justify-between pt-4">
                   <button onClick={() => setStep(1)} className="rounded-full border cursor-pointer px-6">Back</button>
-                  <button onClick={() => setStep(3)} disabled={!canProceedStep2} className="rounded-full px-4 cursor-pointer flex items-center bg-main py-2">
+                  <button onClick={() => {setStep(3); handleSubmit()}} className="rounded-full px-4 cursor-pointer flex items-center bg-main py-2">
                     Book Now
                     <ChevronRight size={16} />
                   </button>

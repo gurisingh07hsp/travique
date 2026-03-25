@@ -356,7 +356,7 @@ const PackageDetail = () => {
               </div>
             </div>
  
-            <button onClick={()=> router.push('book-now')} className="w-full mt-7 bg-main cursor-pointer text-white font-bold py-4 rounded-2xl transition-all text-sm tracking-wide shadow-lg shadow-amber-400/20">
+            <button onClick={()=> router.push(`${locationPackageName}/book-now`)} className="w-full mt-7 bg-main cursor-pointer text-white font-bold py-4 rounded-2xl transition-all text-sm tracking-wide shadow-lg shadow-amber-400/20">
               Book This Package
             </button>
  
