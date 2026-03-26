@@ -50,10 +50,10 @@ export default function AdminLayout({
       <aside
         className={`${
           sidebarOpen ? "w-64" : "w-0 md:w-20"
-        } fixed inset-y-0 left-0 z-50 flex flex-col bg-white border-r transition-all duration-300 overflow-hidden`}
+        } fixed inset-y-0 left-0 z-50 flex flex-col bg-white border-r border-gray-300 transition-all duration-300 overflow-hidden`}
       >
         {/* Logo */}
-        <div className="flex h-16 items-center justify-between px-3 border-b">
+        <div className="flex h-16 items-center justify-between px-3 border-b border-gray-300">
           {sidebarOpen && (
             <Link href="/admin" className="flex items-center gap-2">
               <img src="/logo.png" className="h-8 w-8" />
@@ -86,7 +86,7 @@ export default function AdminLayout({
 
         {/* Bottom */}
         {sidebarOpen && (
-          <div className="border-t p-3">
+          <div className="border-t border-gray-300 p-3">
             <Link href="/" className="flex items-center gap-2 text-sm">
               <LogOut className="h-5 w-5" />
               Back to Website
@@ -102,7 +102,7 @@ export default function AdminLayout({
         } transition-all`}
       >
         {/* Top Bar */}
-        <header className="flex h-16 items-center border-b px-6">
+        <header className="flex h-16 items-center border-b border-gray-300 px-6">
           <button
             className="md:hidden"
             onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -110,16 +110,16 @@ export default function AdminLayout({
             <Menu />
           </button>
 
-          <div className="relative ml-4">
+          {/* <div className="relative ml-4">
             <Search className="absolute left-2 top-2 h-4 w-4" />
             <input
               placeholder="Search..."
               className="pl-8 border rounded-md h-9"
             />
-          </div>
+          </div> */}
 
-          <div className="ml-auto flex items-center gap-4">
-            <Bell />
+          <div className="ml-auto border border-gray-300 p-2 rounded-lg flex items-center gap-4">
+            {/* <Bell /> */}
 
             <div className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">

@@ -22,8 +22,18 @@ const statusColors: Record<string, string> = {
 };
 const Bookings = () => {
     const [bookings,setBookings] = useState<BookingsType[]>([]);
+    const [searchTerm, setSearchTerm] = useState("");
     const [filterStatus, setFilterStatus] = useState("all");
-    const filtered = filterStatus === "all" ? bookings : bookings.filter((b) => b.payment === filterStatus);
+    // const filtered = filterStatus === "all" ? bookings : bookings.filter((b) => b.payment === filterStatus);
+    const filtered = bookings
+  .filter((b) =>
+    filterStatus === "all" ? true : b.payment === filterStatus
+  )
+  .filter((b) =>
+    b.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    b.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (typeof b.destination === 'object' ? b.destination?.location?.toLowerCase().includes(searchTerm.toLowerCase()) : b.destination?.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
 
     const fetchBookings = async() => {
       const response = await axios.get('/api/bookings');
@@ -43,9 +53,9 @@ const Bookings = () => {
           <h1 className="text-2xl font-bold text-foreground">Bookings</h1>
           <p className="text-muted-foreground text-sm">Manage all tour bookings</p>
         </div>
-        <button className="bg-main p-2 rounded-lg flex justify-center items-center text-primary-foreground hover:bg-primary/90">
+        {/* <button className="bg-main p-2 rounded-lg flex justify-center items-center text-primary-foreground hover:bg-primary/90">
           <Plus className="h-4 w-4 mr-2" /> New Booking
-        </button>
+        </button> */}
       </div>
 
       <div className="border border-gray-300 rounded-lg shadow p-6 ">
@@ -53,7 +63,7 @@ const Bookings = () => {
           <div className="flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <input placeholder="Search bookings..." className="pl-9 bg-white w-full py-2 rounded-lg border border-gray-300" />
+              <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search bookings..." className="pl-9 bg-white w-full py-2 rounded-lg border border-gray-300" />
             </div>
             <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="border border-gray-300 rounded-lg">
                 <option value="all">All</option>
@@ -61,9 +71,9 @@ const Bookings = () => {
                 <option value="pending">Pending</option>
                 <option value="cancelled">Cancelled</option>
             </select>
-            <button>
+            {/* <button>
               <Download className="h-4 w-4" />
-            </button>
+            </button> */}
           </div>
         </div>
         <div>
@@ -71,29 +81,28 @@ const Bookings = () => {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border">
-                  {/* <th className="text-left py-3 px-2 text-muted-foreground font-medium">ID</th> */}
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium">Customer</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden lg:table-cell">Destination</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden md:table-cell">Check In</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden md:table-cell">Check Out</th>
+                  <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden md:table-cell">Booking Date</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium">Amount</th>
-                  <th className="text-left py-3 px-2 text-muted-foreground font-medium">Status</th>
+                  <th className="text-left py-3 px-2 text-muted-foreground font-medium">Payment</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {filtered.map((b) => (
                   <tr key={b._id} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
-                    {/* <td className="py-3 px-2 font-mono text-xs">{b._id}</td> */}
                     <td className="py-3 px-2">
                       <p className="font-medium text-foreground">{b.name}</p>
                       <p className="text-xs text-muted-foreground">{b.email}</p>
                     </td>
-                    <td className="py-3 px-2 text-muted-foreground hidden lg:table-cell">{b.destination}</td>
+                    <td className="py-3 px-2 text-muted-foreground hidden lg:table-cell">{typeof b.destination === 'object' ? b.destination?.location : b.destination}</td>
                     <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.departureDate).toLocaleDateString()}</td>
                     <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.returnDate).toLocaleDateString()}</td>
-                    {/* <td className="py-3 px-2 font-medium text-foreground">{b.amount}</td> */}
-                    <td className="py-3 px-2 font-medium text-foreground">{b.phone}</td>
+                    <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.createdAt).toLocaleDateString()}</td>
+                    <td className="py-3 px-2 font-medium text-foreground">{typeof b.destination === 'object' ? b.destination?.price : 'N/A'}</td>
                     <td className="py-3 px-2">
                       <div className={`text-xs rounded-2xl w-[70%] text-center capitalize ${statusColors[b.payment]}`}>
                         {b.payment}
@@ -113,6 +122,11 @@ const Bookings = () => {
                 ))}
               </tbody>
             </table>
+            {filtered.length === 0 && (
+              <p className="text-center text-gray-500 mt-4">
+                No bookings found
+              </p>
+            )}
           </div>
         </div>
       </div>

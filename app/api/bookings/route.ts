@@ -5,8 +5,7 @@ import Booking from "@/models/booking";
 export async function GET() {
   await connectDB();
 
-  const bookings = await Booking.find().populate("destination");
-  // const bookings = await Booking.find()
+  const bookings = await Booking.find().populate("destination").sort({ createdAt: -1 });
 
   return NextResponse.json(bookings);
 }

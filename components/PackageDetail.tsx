@@ -103,8 +103,8 @@ const PackageDetail = () => {
     const router = useRouter();
     const {locationPackageName} = useParams();
     const [tour, setTour] = useState<ToursType | null>(null);
+    const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<"overview" | "itinerary" | "includes" | "reviews">("overview");
-    const [activeImage, setActiveImage] = useState(0);
 
     const getTour = async()=> {
       try{
@@ -116,10 +116,27 @@ const PackageDetail = () => {
       }catch(error){
         console.log(error);
       }
+      setLoading(false);
     } 
     useEffect(()=>{
       getTour();
     },[])
+
+    if(loading){
+      return (
+        <div className="h-screen w-full flex justify-center items-center">
+          Loading...
+        </div>
+      )
+    }
+
+    if(!tour){
+      return (
+        <div className="h-screen w-full flex justify-center items-center">
+          Tour Package Not Found.
+        </div>
+      )
+    }
 
   return (
      <div className="min-h-screen font-sans">

@@ -15,9 +15,17 @@ const packages = [
 
 const Packages = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const [mode, setMode] = useState<'create' | 'edit'>('create');
   const [tours, setTours] = useState<ToursType[]>([]);
   const [existingTour, setExistingTour] = useState<ToursType>();
+
+  const filtered = tours
+  .filter((t) =>
+    t.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    t.country?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    String(t.location).toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const getTours = async()=> {
     const response = await axios.get('/api/tours');
@@ -88,12 +96,12 @@ const deleteTourPackage = async (id: string) => {
       <div className="pb-3">
         <div className="relative max-w-md">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <input placeholder="Search packages..." className="pl-9 w-full p-2 border border-gray-300 rounded-lg" />
+          <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search packages..." className="pl-9 w-full p-2 border border-gray-300 rounded-lg" />
         </div>
       </div>
       <div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {tours.map((pkg) => (
+          {filtered.map((pkg) => (
             <div key={pkg._id} className="border border-gray-300 rounded-lg shadow overflow-hidden">
               <div className="h-36 bg-muted flex items-center justify-center">
                 {/* <span className="text-muted-foreground text-sm">Package Image</span> */}

@@ -79,7 +79,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-border px-4 pb-4">
-          <ul className="flex flex-col gap-4 pt-4">
+          <ul className="flex flex-col gap-4 pt-4 pb-4">
               <li>
                 <Link onClick={()=>setMobileOpen(false)} href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Home
@@ -106,7 +106,7 @@ const Navbar = () => {
                 </Link>
               </li>
           </ul>
-          <Link href={'book-now'} className="mt-4 w-full rounded-full bg-main text-white">
+          <Link href={'book-now'} className="w-full px-4 py-2 rounded-full bg-main text-white">
             Book Now
           </Link>
         </div>

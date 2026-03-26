@@ -20,7 +20,7 @@ export interface BookingsType {
   phone: string,
   nationality: string,
   passportNo: string,
-  destination: string,
+  destination: string | ToursType,
   departureDate: Date,
   returnDate: Date,
   adults: number,

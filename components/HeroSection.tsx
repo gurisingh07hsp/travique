@@ -58,7 +58,7 @@ const HeroSection = () => {
           </div>
 
           {/* Bottom Right Stats */}
-          <div className="self-end w-20 md:w-28 lg:w-65 absolute bottom-0 md:bottom-8 md:mr-8">
+          <div className="self-end w-20 md:w-28 lg:w-65 absolute bottom-10 md:bottom-8 md:mr-8">
             <div className="rounded-t-lg md:px-6 md:py-4 flex md:gap-2">
               <span className="text-sm md:text-4xl lg:text-6xl font-bold text-foreground">22</span>
               <span className="text-sm md:text-4xl lg:text-6xl font-bold text-foreground">+</span>
@@ -67,7 +67,7 @@ const HeroSection = () => {
                 <p className="md:text-lg text-foreground">Experience</p>
               </div>
             </div>
-            <div className="bg-background border-b border-border md:ms-8 py-3">
+            <div className="bg-background border-b border-border md:block hidden md:ms-8 py-3">
               <a
                 href="#"
                 className="text-xs md:text-sm flex items-center md:gap-2 font-bold text-foreground hover:opacity-70 transition-opacity"
