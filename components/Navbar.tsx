@@ -2,9 +2,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import AuthModal from "./authModal";
+import { useUser } from "@/context/UserContext";
 
 const Navbar = () => {
+    const { user, logout } = useUser();
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
   return (
      <nav className="w-full max-w-7xl mx-auto bg-background">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
@@ -57,13 +61,34 @@ const Navbar = () => {
               Contact Us
             </Link>
           </li>
+            {user && user.role === 'admin' && (
+            <li>
+              <Link
+                href="admin"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Admin
+              </Link>
+            </li>
+            )}
         </ul>
 
         {/* CTA */}
         <div className="hidden md:block">
-          <Link href={'book-now'} className="rounded-full cursor-pointer px-4 py-2 bg-[#F1AC32] text-white hover:opacity-90 transition-opacity">
-            Book Now
-          </Link>
+          {user ? (
+            <>
+            <Link href={'/tours'} className="rounded-full cursor-pointer px-4 py-2 bg-[#F1AC32] text-white hover:opacity-90 transition-opacity">
+              Book Now
+            </Link>
+            <button onClick={logout} className="rounded-full cursor-pointer ms-2 px-4 py-2 bg-red-600 text-white hover:opacity-90 transition-opacity">
+              Logout
+            </button>
+            </>
+          ) : (
+          <button onClick={()=> setIsOpen(true)} className="rounded-full cursor-pointer ms-2 px-4 py-2 bg-black text-white hover:opacity-90 transition-opacity">
+            Login
+          </button>
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -106,10 +131,27 @@ const Navbar = () => {
                 </Link>
               </li>
           </ul>
-          <Link href={'book-now'} className="w-full px-4 py-2 rounded-full bg-main text-white">
-            Book Now
-          </Link>
+
+          {user ? (
+            <>
+            <Link href={'/tours'} className="w-full px-4 py-2 rounded-full bg-main text-white">
+              Book Now
+            </Link>
+            <br />
+            <button onClick={logout} className="mt-4 px-4 py-2 rounded-full bg-red-600 text-white">
+              Logout
+            </button>
+            </>
+          ) : (
+          <button onClick={()=> setIsOpen(true)} className="w-full px-4 py-2 rounded-full bg-main text-white">
+            Login
+          </button>
+          )}
+
         </div>
+      )}
+      {isOpen && (
+        <AuthModal isOpen={isOpen} setIsOpen={setIsOpen} />
       )}
     </nav>
   )

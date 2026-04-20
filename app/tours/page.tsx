@@ -1,30 +1,19 @@
 'use client'
 import { ToursType } from '@/types/types';
 import axios from 'axios';
-import { ChevronRight, MapPin } from 'lucide-react'
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-// const services = [
-//   {
-//     location: "Colorado, USA",
-//     title: "Shadowpeak Canyon",
-//     price: "$740",
-//   },
-//   {
-//     location: "Bali, Indonesia",
-//     title: "Bali Getaway Package",
-//     price: "$320",
-//   },
-//   {
-//     location: "Paris, France",
-//     title: "European Discovery Tour",
-//     price: "$1,450",
-//   },
-// ];
+import { ChevronRight, MapPin, Search } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
 
-const ServicesSection = () => {
-  const router = useRouter();
-  const [tours, setTours] = useState<ToursType[]>([]);
+const page = () => {
+    const [tours, setTours] = useState<ToursType[]>([]);
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const filtered = tours
+  .filter((t) =>
+    t.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    t.country?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    String(t.location).toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   useEffect(()=>{
     const getTours = async()=> {
@@ -37,14 +26,15 @@ const ServicesSection = () => {
     getTours();
   },[]);
   return (
-     <section className="w-full py-20 bg-background">
-      <div className="max-w-6xl mx-auto px-8">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-foreground text-center mb-14">
-          Discover Premium Travel Services
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
-          {tours?.map((service) => (
+    <div className='max-w-6xl lg:mx-auto mx-4'>
+        <div className="py-3">
+        <div className="relative max-w-md">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search packages..." className="pl-9 w-full p-2 border border-gray-300 rounded-lg" />
+        </div>
+      </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14 mt-14">
+          {filtered?.map((service) => (
             <div key={service._id} className="flex flex-col border border-gray-300 p-2 rounded-3xl ">
               {/* Image placeholder */}
               <div className="rounded-2xl aspect-4/3 mb-4" >
@@ -74,16 +64,8 @@ const ServicesSection = () => {
             </div>
           ))}
         </div>
-
-        {/* View All */}
-        <div className="flex justify-center">
-          <button onClick={()=> router.push('/tours')} className="bg-black cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
-            View All Service
-          </button>
-        </div>
-      </div>
-    </section>
+    </div>
   )
 }
 
-export default ServicesSection
+export default page

@@ -1,11 +1,12 @@
-import aboutImg from "@/assets/about-us.jpg";
-
+'use client'
+import { useRouter } from "next/navigation";
 const stats = [
   { value: "98%", label: "Customer Satisfaction" },
   { value: "90%", label: "Global Destination" },
   { value: "86%", label: "Repeat Traveler" },
 ];
 const AboutUsSection = () => {
+  const router = useRouter();
   return (
       <section className="w-full py-20 bg-background">
       <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -51,7 +52,7 @@ const AboutUsSection = () => {
           </div>
 
           {/* CTA */}
-          <button className="bg-[#2986FF] text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
+          <button onClick={()=> router.push('/tours')} className="bg-[#2986FF] cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
             Book Now
           </button>
         </div>
