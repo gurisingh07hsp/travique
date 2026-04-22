@@ -12,8 +12,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Image src={'/logo.png'} alt="Logo" width={36} height={36}></Image>
-            <span className="text-xl font-bold text-gray-900 tracking-tight">Milky Ways Tours</span>
+            <img src='/logo.png' alt="logo" className="md:w-48 w-28 rounded-lg" />
           </div>
 
           <p className="text-gray-400 text-sm leading-relaxed max-w-50">
@@ -101,7 +100,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
-          <p>Copyigt © 2026 Travique &nbsp;|    </p>
+          <p>Copyigt © 2026 MilkyWay Tours & Transfers &nbsp;|    </p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-amber-500 transition-colors">Terms of Use</a>
             <span>|</span>

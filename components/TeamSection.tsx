@@ -9,7 +9,7 @@ const TeamSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-sm uppercase tracking-widest text-blue-600 font-semibold mb-3">
+          <p className="text-sm uppercase tracking-widest txt-main font-semibold mb-3">
             OUR TEAM
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 italic">
@@ -47,7 +47,7 @@ const TeamSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <button className="rounded-full px-4 py-2 cursor-pointer bg-blue-600 text-primary">View All Expert</button>
+          <button className="rounded-full px-4 py-2 cursor-pointer bg-main text-primary">View All Expert</button>
         </div>
       </div>
     </section>

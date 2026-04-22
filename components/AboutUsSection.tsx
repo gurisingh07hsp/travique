@@ -25,7 +25,7 @@ const AboutUsSection = () => {
 
         {/* Right Content */}
         <div>
-          <span className="text-[#2986FF] font-semibold text-sm tracking-wide uppercase mb-4 block">
+          <span className="txt-main font-semibold text-sm tracking-wide uppercase mb-4 block">
             About Us
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight mb-6">
@@ -52,7 +52,7 @@ const AboutUsSection = () => {
           </div>
 
           {/* CTA */}
-          <button onClick={()=> router.push('/tours')} className="bg-[#2986FF] cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
+          <button onClick={()=> router.push('/tours')} className="bg-main cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
             Book Now
           </button>
         </div>

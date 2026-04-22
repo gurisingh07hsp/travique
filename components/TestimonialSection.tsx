@@ -43,7 +43,7 @@ function StarRating({ count }: { count: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          className={`w-5 h-5 ${i < count ? "text-blue-500" : "text-gray-200"}`}
+          className={`w-5 h-5 ${i < count ? "txt-main" : "text-gray-200"}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -124,7 +124,7 @@ const TestimonialSection = () => {
       <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center gap-16">
         {/* Left content */}
         <div className="flex-1 min-w-65 max-w-sm">
-          <p className="text-blue-500 text-xs font-bold tracking-widest uppercase mb-3">
+          <p className="txt-main text-xs font-bold tracking-widest uppercase mb-3">
             Testimonial
           </p>
           <h2 className="text-4xl font-extrabold text-gray-900 leading-tight mb-5">
@@ -144,7 +144,7 @@ const TestimonialSection = () => {
             <button
               onClick={prev}
               aria-label="Previous testimonial"
-              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-blue-500 hover:text-blue-500 transition-colors"
+              className="w-10 h-10 rounded-full cursor-pointer border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#FF7528] hover:text-[#FF7528] transition-colors"
             >
               <svg
                 className="w-4 h-4"
@@ -163,7 +163,7 @@ const TestimonialSection = () => {
             <button
               onClick={next}
               aria-label="Next testimonial"
-              className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white hover:bg-blue-600 transition-colors shadow-md"
+              className="w-10 h-10 rounded-full cursor-pointer bg-main flex items-center justify-center text-white transition-colors shadow-md"
             >
               <svg
                 className="w-4 h-4"
@@ -205,8 +205,8 @@ const TestimonialSection = () => {
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`Go to testimonial ${i + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === current ? "bg-blue-500 w-5" : "bg-gray-300 w-2"
+            className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
+              i === current ? "bg-main w-5" : "bg-gray-300 w-2"
             }`}
           />
         ))}

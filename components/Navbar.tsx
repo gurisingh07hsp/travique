@@ -14,8 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         {/* Logo */}
         <button className="flex items-center gap-2">
-          <img src='/logo.png' alt="Travique logo" className="h-8 w-8" />
-          <span className="text-xl font-bold text-foreground tracking-tight">Milky Ways Tours</span>
+          <img src='/logo.png' alt="logo" className="md:w-48 w-28 rounded-lg" />
         </button>
 
 
@@ -77,7 +76,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           {user ? (
             <>
-            <Link href={'/tours'} className="rounded-full cursor-pointer px-4 py-2 bg-[#F1AC32] text-white hover:opacity-90 transition-opacity">
+            <Link href={'/tours'} className="rounded-full cursor-pointer px-4 py-2 bg-main text-white hover:opacity-90 transition-opacity">
               Book Now
             </Link>
             <button onClick={logout} className="rounded-full cursor-pointer ms-2 px-4 py-2 bg-red-600 text-white hover:opacity-90 transition-opacity">
@@ -85,7 +84,7 @@ const Navbar = () => {
             </button>
             </>
           ) : (
-          <button onClick={()=> setIsOpen(true)} className="rounded-full cursor-pointer ms-2 px-4 py-2 bg-black text-white hover:opacity-90 transition-opacity">
+          <button onClick={()=> setIsOpen(true)} className="rounded-full cursor-pointer ms-2 px-4 py-2 bg-main text-white hover:opacity-90 transition-opacity">
             Login
           </button>
           )}

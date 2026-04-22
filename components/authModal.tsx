@@ -144,9 +144,9 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
         <div className="p-7">
           {/* Icon */}
           <div className="flex justify-between items-start">
-          <div className="w-10 h-10 rounded-xl bg-yellow-50 border border-yellow-200 flex items-center justify-center mb-5">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="#b8940a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              stroke="#FF7528" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
@@ -158,13 +158,13 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
           </div>
 
           {/* Tab Switcher */}
-          <div className="flex bg-yellow-50 rounded-xl p-1 mb-6 border border-yellow-100">
+          <div className="flex bg-[#ff7328b6] rounded-xl p-1 mb-6">
             <button
               onClick={() => switchMode(true)}
               className={`flex-1 py-2 text-sm rounded-lg transition-all duration-200 font-medium
                 ${isLogin
-                  ? "bg-white text-gray-800 shadow-sm border border-yellow-100"
-                  : "text-gray-400 hover:text-gray-600"
+                  ? "bg-white shadow-sm border border-yellow-100"
+                  : "text-white"
                 }`}
             >
               Login
@@ -174,7 +174,7 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
               className={`flex-1 py-2 text-sm rounded-lg transition-all duration-200 font-medium
                 ${!isLogin
                   ? "bg-white text-gray-800 shadow-sm border border-yellow-100"
-                  : "text-gray-400 hover:text-gray-600"
+                  : "text-white"
                 }`}
             >
               Sign up
@@ -190,7 +190,7 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="w-full px-4 py-2.5 rounded-xl border
                   text-gray-800 text-sm placeholder:text-gray-400
-                  focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200
+                  focus:outline-none focus:ring-1 focus:ring-[#FF7528]
                   transition-all duration-200"
               />
             )}
@@ -202,7 +202,7 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full px-4 py-2.5 rounded-xl border
                 text-gray-800 text-sm placeholder:text-gray-400
-                focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200
+                focus:outline-none focus:ring-1 focus:ring-[#FF7528]
                 transition-all duration-200"
             />
 
@@ -213,7 +213,7 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               className="w-full px-4 py-2.5 rounded-xl border
                 text-gray-800 text-sm placeholder:text-gray-400
-                focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200
+                focus:outline-none focus:ring-1 focus:ring-[#FF7528]
                 transition-all duration-200"
             />
           </div>

@@ -28,7 +28,7 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-widest text-blue-600 mb-3">
+          <p className="text-sm uppercase tracking-widest txt-main mb-3">
             HOW IT WORKS
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight max-w-lg mx-auto">
@@ -43,8 +43,8 @@ const HowItWorksSection = () => {
 
                 <div className={`flex flex-col items-center ${index%2 != 0 && 'lg:mt-20'}`}>
                     {/* Icon circle */}
-                    <div className="w-16 h-16 rounded-full bg-blue-200 flex items-center justify-center mb-5">
-                    <step.icon className="w-7 h-7 text-blue-600" />
+                    <div className="w-16 h-16 rounded-full bg-[#ff732833] flex items-center justify-center mb-5">
+                    <step.icon className="w-7 h-7 txt-main" />
                     </div>
 
                     {/* Title */}

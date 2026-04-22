@@ -77,7 +77,7 @@ const ServicesSection = () => {
 
         {/* View All */}
         <div className="flex justify-center">
-          <button onClick={()=> router.push('/tours')} className="bg-black cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
+          <button onClick={()=> router.push('/tours')} className="bg-main cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
             View All Service
           </button>
         </div>

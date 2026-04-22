@@ -38,7 +38,7 @@ const PricingSection = () => {
       <div className="max-w-6xl mx-auto px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-3 block">
+          <span className="text-xs txt-main font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-3 block">
             Pricing
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
@@ -63,7 +63,7 @@ const PricingSection = () => {
               <div className="bg-muted rounded-xl aspect-video mb-5" />
 
               {/* Price */}
-              <h3 className="text-3xl font-extrabold text-foreground mb-2">
+              <h3 className="text-3xl txt-main font-extrabold text-foreground mb-2">
                 {pkg.price}
               </h3>
 
@@ -76,7 +76,7 @@ const PricingSection = () => {
               <ul className="flex flex-col gap-2.5 mb-6">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <div className='bg-black rounded-full p-1'>
+                    <div className='bg-main rounded-full p-1'>
                      <Check size={14} className="text-primary shrink-0" />
                     </div>
                     {feature}
@@ -85,7 +85,7 @@ const PricingSection = () => {
               </ul>
 
               {/* CTA */}
-              <button className="mt-auto bg-black hover:bg-primary/90 text-primary   rounded-full px-6 py-2.5 text-sm font-medium transition-colors w-full">
+              <button className="mt-auto bg-main text-primary cursor-pointer rounded-full px-6 py-2.5 text-sm font-medium transition-colors w-full">
                 View All Service
               </button>
             </div>

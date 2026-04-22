@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="bg-card border border-border rounded-2xl p-5 flex items-start gap-4 shadow-sm"
+                className="bg-card border border-gray-300 rounded-2xl p-5 flex items-start gap-4 shadow-sm"
               >
                 {/* Avatar placeholder */}
                 <div className="w-10 h-10 rounded-full bg-muted shrink-0" />
@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
 
           {/* Right – Why Choose Us */}
           <div>
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-3 block">
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase txt-main mb-3 block">
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
@@ -71,8 +71,8 @@ const WhyChooseUs = () => {
                 const Icon = f.icon;
                 return (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                      <Icon size={18} className="text-blue-600" />
+                    <div className="w-10 h-10 rounded-full bg-[#ff762154] flex items-center justify-center shrink-0">
+                      <Icon size={18} className="txt-main" />
                     </div>
                     <div>
                       <h4 className="text-base font-bold text-foreground mb-1">{f.title}</h4>
