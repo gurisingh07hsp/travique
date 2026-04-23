@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
               <br />
               Adventure and Travels
             </h2>
-            <p className="text-sm text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-8">
               Fermentum turbo consella non lacus. Aliquam ut ut ularm envays
               aria a massa mount automata eu. Fermentum turbo consella.
               Aliquam ut at naters tranba asy manet tucani.
@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
                     </div>
                     <div>
                       <h4 className="text-base font-bold text-foreground mb-1">{f.title}</h4>
-                      <p className="text-xs text-muted-foreground">{f.description}</p>
+                      <p className="text-sm text-muted-foreground">{f.description}</p>
                     </div>
                   </div>
                 );

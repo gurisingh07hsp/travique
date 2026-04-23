@@ -46,7 +46,7 @@ const PricingSection = () => {
             <br />
             Exclusive Packages
           </h2>
-          <p className="text-sm text-muted-foreground max-w-lg mx-auto">
+          <p className="text-muted-foreground max-w-lg mx-auto">
             Fermentum turbo consella non lacus. Aliquam ut ut ularm motus elo masa mount
             automata eu. Fermentum turbo consella. Aliquam ut at
           </p>
@@ -63,7 +63,7 @@ const PricingSection = () => {
               <div className="bg-muted rounded-xl aspect-video mb-5" />
 
               {/* Price */}
-              <h3 className="text-3xl txt-main font-extrabold text-foreground mb-2">
+              <h3 className="text-3xl font-extrabold text-foreground mb-2">
                 {pkg.price}
               </h3>
 
@@ -76,7 +76,7 @@ const PricingSection = () => {
               <ul className="flex flex-col gap-2.5 mb-6">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <div className='bg-main rounded-full p-1'>
+                    <div className='bg-black rounded-full p-1'>
                      <Check size={14} className="text-primary shrink-0" />
                     </div>
                     {feature}

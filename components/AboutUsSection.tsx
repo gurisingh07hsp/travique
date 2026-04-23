@@ -33,7 +33,7 @@ const AboutUsSection = () => {
             <br />
             Experience with Travique
           </h2>
-          <p className="text-muted-foreground text-sm leading-relaxed mb-10 max-w-md">
+          <p className="text-muted-foreground leading-relaxed mb-10 max-w-md">
             Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu
             arcu massa laoreet commodo ac. Fermentum luctus convallis. Aliquam at
             ut viverra noniqu arcu massa laoreet

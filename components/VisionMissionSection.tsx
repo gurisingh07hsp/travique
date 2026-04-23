@@ -20,7 +20,7 @@ const VisionMissionSection = () => {
               <br />
               Visionary Pathway
             </h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-10 max-w-md">
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-md">
               Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu
               arcu massa laoreet commodo ac. Fermentum luctus convallis.
             </p>
@@ -37,7 +37,7 @@ const VisionMissionSection = () => {
           {/* Right – Our Vision card */}
           <div className="bg-white text-black md:mt-12 mb-6 rounded-2xl p-8 max-w-sm ml-auto">
             <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               To be the leading provider of online transportation services that transforms the
               paradigm of travel, delivers an excellent driving experience, and becomes a trusted
               partner for efficient mobility worldwide.
@@ -63,7 +63,7 @@ const VisionMissionSection = () => {
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
                 <div>
                   <h4 className="text-base font-bold text-foreground mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-muted-foreground">
                     Socis varius nisi eu ipsum faucibus. Ac semper nisi
                     turpis diam libero id ante nullam. Tellus.
                   </p>

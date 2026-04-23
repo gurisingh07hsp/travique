@@ -28,10 +28,10 @@ const AboutUsPage = () => {
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-2">
               Dear Valued Costumer
             </h2>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-4">
               Welcome to our online taxi business company!
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu
               arcu massa laoreet commodo ac. Fermentum luctus convallis.
               Aliquam at ut viverra noniqu arcu massa laoreet. Fermentum luctus
@@ -51,8 +51,8 @@ const AboutUsPage = () => {
                   <Clock size={18} className="text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-foreground">Visit Get In 2 Days</p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="font-bold text-foreground">Visit Get In 2 Days</p>
+                  <p className="text-sm text-muted-foreground">
                     Fermentum luctus convallis non lectus. Aliquam at ut.
                   </p>
                 </div>
@@ -62,8 +62,8 @@ const AboutUsPage = () => {
                   <Award size={18} className="text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-foreground">Best Travel Agents</p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="font-bold text-foreground">Best Travel Agents</p>
+                  <p className="text-sm text-muted-foreground">
                     Fermentum luctus convallis non lectus. Aliquam at ut.
                   </p>
                 </div>

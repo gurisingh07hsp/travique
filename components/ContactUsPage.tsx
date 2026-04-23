@@ -19,7 +19,7 @@ const ContactUsPage = () => {
               <br />
               Travel Specialists
             </h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-10 max-w-sm">
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-sm">
               Fermentum luctus convallis non lectus. Aliquam at ut viverra
               noniqu arcu massa laoreet.
             </p>
@@ -31,31 +31,31 @@ const ContactUsPage = () => {
                 <div className="grid grid-cols-2 gap-6">
                   {/* Indonesia */}
                   <div>
-                    <p className="font-semibold text-sm text-foreground mb-3">Indonesia</p>
+                    <p className="font-semibold text-foreground mb-3">Indonesia</p>
                     <div className="flex items-start gap-2 mb-2">
                       <MapPin size={14} className="txt-main mt-0.5 shrink-0" />
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         Jl. MH Thamrin No.1, Jakarta Pusat 10310
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone size={14} className="txt-main shrink-0" />
-                      <p className="text-xs text-muted-foreground">+1 (333) 000-0000</p>
+                      <p className="text-sm text-muted-foreground">+1 (333) 000-0000</p>
                     </div>
                   </div>
 
                   {/* Australia */}
                   <div>
-                    <p className="font-semibold text-sm text-foreground mb-3">Australia</p>
+                    <p className="font-semibold text-foreground mb-3">Australia</p>
                     <div className="flex items-start gap-2 mb-2">
                       <MapPin size={14} className="txt-main mt-0.5 shrink-0" />
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         333 Collins, Melbourne VIC 3000, Australia
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone size={14} className="text-primary shrink-0" />
-                      <p className="text-xs text-muted-foreground">+2 (444) 000-0000</p>
+                      <p className="text-sm text-muted-foreground">+2 (444) 000-0000</p>
                     </div>
                   </div>
                 </div>

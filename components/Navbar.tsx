@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, MoveDown, X } from "lucide-react";
 import Link from "next/link";
 import AuthModal from "./authModal";
 import { useUser } from "@/context/UserContext";
@@ -23,7 +23,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Home
             </Link>
@@ -31,23 +31,100 @@ const Navbar = () => {
           <li>
             <Link
               href="about"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               About Us
             </Link>
           </li>
-          <li>
+          <li className="relative group">
             <Link
               href="services"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Services
+              <MoveDown size={14}/> 
+            </Link>
+
+                {/* Dropdown */}
+                <div className="absolute left-0 top-full mt-2 w-80 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <ul className="py-2">
+                    <li>
+                      <Link href="/queenstown-airport-transfers" className="block px-4 py-2 hover:bg-gray-100">
+                        Queenstown Airport Transfers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/queenstown-taxi-services" className="block px-4 py-2 hover:bg-gray-100">
+                        Queenstown Texi Services
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+          </li>
+          <li className="relative group">
+            <div
+              className="flex items-center font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Day Tours
+              <MoveDown size={14}/> 
+            </div>
+
+                {/* Dropdown */}
+                <div className="absolute left-0 top-full mt-2 w-80 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <ul className="py-2">
+                    <li>
+                      <Link href="/from-queenstown" className="block px-4 py-2 hover:bg-gray-100">
+                        From QueensTown
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/cardrona-sky-field" className="block px-4 py-2 hover:bg-gray-100">
+                        Cardrona Sky Field
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/remarkables-ski" className="block px-4 py-2 hover:bg-gray-100">
+                        Remarkables Ski
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/coronet-ski" className="block px-4 py-2 hover:bg-gray-100">
+                        Coronet Ski
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/milford-sound-day-tour" className="block px-4 py-2 hover:bg-gray-100">
+                        Milford Sound Day Tour
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/luxury-private-wanaka-scenic-tour" className="block px-4 py-2 hover:bg-gray-100">
+                        Luxury Private Wanaka Scenic Tour
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+          </li>
+          <li>
+            <Link
+              href="/wine-tour"
+              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Wine Tour
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/milford-tour"
+              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Milford Tour
             </Link>
           </li>
           <li>
             <Link
               href="blogs"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Blogs
             </Link>
@@ -55,7 +132,7 @@ const Navbar = () => {
           <li>
             <Link
               href="contact"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact Us
             </Link>
@@ -64,7 +141,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="admin"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 Admin
               </Link>
