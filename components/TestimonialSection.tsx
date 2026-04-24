@@ -9,7 +9,7 @@ const testimonials = [
     company: "Google Inc",
     avatar: "https://i.pravatar.cc/150?img=12",
     rating: 5,
-    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and free.",
+    text: "Excellent service, very punctual, and extremely comfortable ride.",
   },
   {
     id: 2,
@@ -17,24 +17,8 @@ const testimonials = [
     company: "Apple Inc",
     avatar: "https://i.pravatar.cc/150?img=47",
     rating: 5,
-    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and free.",
-  },
-  {
-    id: 3,
-    name: "Marcus Chen",
-    company: "Meta",
-    avatar: "https://i.pravatar.cc/150?img=33",
-    rating: 5,
-    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and free.",
-  },
-  {
-    id: 4,
-    name: "Priya Nair",
-    company: "Stripe",
-    avatar: "https://i.pravatar.cc/150?img=56",
-    rating: 5,
-    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and free.",
-  },
+    text: "Highly professional drivers and a smooth experience from start to finish",
+  }
 ];
 
 function StarRating({ count }: { count: number }) {
@@ -80,7 +64,6 @@ function TestimonialCard({
       <p className="font-bold text-gray-900 text-base leading-tight">
         {testimonial.name}
       </p>
-      <p className="text-gray-400 text-sm mt-0.5">{testimonial.company}</p>
 
       {/* Quote icon */}
       <div className="mt-4 mb-2">
@@ -134,13 +117,9 @@ const TestimonialSection = () => {
             <br />
             Think Us
           </h2>
-          <p className="text-gray-400 text-sm leading-relaxed mb-8">
-            Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu
-            arcu massa laoreet commodo ac.
-          </p>
 
           {/* Navigation buttons */}
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <button
               onClick={prev}
               aria-label="Previous testimonial"
@@ -179,7 +158,7 @@ const TestimonialSection = () => {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Cards */}
@@ -199,7 +178,7 @@ const TestimonialSection = () => {
       </div>
 
       {/* Dot indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {testimonials.map((_, i) => (
           <button
             key={i}
@@ -210,7 +189,7 @@ const TestimonialSection = () => {
             }`}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }

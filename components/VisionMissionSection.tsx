@@ -13,42 +13,41 @@ const VisionMissionSection = () => {
           {/* Left – Dark block */}
           <div className="bg-foreground text-background rounded-2xl p-10">
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-4 block">
-              Vision & Mission
+              Vision
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-6">
-              Travique
+              MilkyWay Tours
               <br />
               Visionary Pathway
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-10 max-w-md">
-              Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu
-              arcu massa laoreet commodo ac. Fermentum luctus convallis.
+              To become a leading travel and transfer service known for reliability, comfort, 
+              and exceptional customer experience.
             </p>
-            <div className="flex md:gap-10 gap-5">
+            {/* <div className="flex md:gap-10 gap-5">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="text-3xl font-extrabold">{stat.value}</p>
                   <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Right – Our Vision card */}
-          <div className="bg-white text-black md:mt-12 mb-6 rounded-2xl p-8 max-w-sm ml-auto">
-            <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              To be the leading provider of online transportation services that transforms the
-              paradigm of travel, delivers an excellent driving experience, and becomes a trusted
-              partner for efficient mobility worldwide.
-            </p>
+          <div className="bg-white text-black md:mt-12 mb-6 rounded-2xl p-8 max-w-lg ml-auto">
+            <h3 className="text-xl font-bold mb-4">Our Values</h3>
+            <p className="text-muted-foreground leading-relaxed">Reliability</p>
+            <p className="text-muted-foreground leading-relaxed">Safety</p>
+            <p className="text-muted-foreground leading-relaxed">Transparency</p>
+            <p className="text-muted-foreground leading-relaxed">Customer-first approach</p>
           </div>
         </div>
         </div>
         </div>
 
         {/* Our Mission */}
-        <div className="mb-0 max-w-6xl mx-auto">
+        {/* <div className="mb-0 max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-10">
             Our Mission
           </h2>
@@ -71,7 +70,7 @@ const VisionMissionSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
      
     </section>
   )

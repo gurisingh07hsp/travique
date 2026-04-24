@@ -1,6 +1,7 @@
 import AboutUsSection from "@/components/AboutUsSection";
 import BookingSearchSection from "@/components/BookingSearchSection";
 import BrandSection from "@/components/BrandSection";
+import FeaturedTours from "@/components/FeaturedTours";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
@@ -17,8 +18,9 @@ export default function Home() {
       {/* <BrandSection/> */}
       <AboutUsSection/>
       <ServicesSection/>
-      <BookingSearchSection/>
-      <PricingSection/>
+      <FeaturedTours/>
+      {/* <BookingSearchSection/> */}
+      {/* <PricingSection/> */}
       <WhyChooseUs/>
       <TestimonialSection/>
    </div>

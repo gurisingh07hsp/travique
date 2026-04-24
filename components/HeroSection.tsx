@@ -18,15 +18,15 @@ const HeroSection = () => {
         {/* Content Overlay */}
         <div className="relative z-10 flex flex-col justify-between h-full min-h-90 md:min-h-150 lg:min-h-170 ps-2 md:ps-0 md:p-12 lg:p-16">
           {/* Top Content */}
-          <div className="flex-1 flex flex-col md:justify-center max-w-lg">
+          <div className="flex-1 flex flex-col md:justify-center max-w-2xl">
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-4">
-              Experience<br />
-              The Magic of<br />
-              Journey
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] tracking-tight mb-4">
+              Reliable Airport<br />
+              Transfers & Private Tours<br />
+              Across New Zealand
             </h1>
-
+             {/* Reliable Airport Transfers & Private Tours Across New Zealand */}
             {/* Step line with numbers */}
             <div className="flex items-center gap-0 mb-4">
               <div className="flex flex-col items-center">
@@ -40,19 +40,19 @@ const HeroSection = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm text-white/80 max-w-sm leading-relaxed">
-                  Fermentum luctus convallis non lectus. Aliquam at ut
-                  viverra non arcu massa laoreet commodo ac.
+                  Premium tours and reliable transfers designed for comfort, safety, and a seamless experience.
                 </p>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-4 mt-4">
-              <button className="bg-white text-foreground rounded-full px-7 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
-                Start Your Journey
+              <button className="bg-white cursor-pointer text-foreground rounded-full px-7 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
+                Book a Ride
               </button>
-              <button className="w-11 h-11 hidden rounded-full bg-white/20 backdrop-blur-sm text-white md:flex items-center justify-center hover:bg-white/30 transition-colors">
-                <PlayCircle size={20} />
+              <button className="hidden md:block cursor-pointer bg-white text-foreground rounded-full px-7 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
+                {/* <PlayCircle size={20} /> */}
+                Explore Tours
               </button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 import React from 'react'
 import BookingSearchSection from './BookingSearchSection'
 import FAQSection from './FAQSection'
@@ -20,8 +20,7 @@ const ContactUsPage = () => {
               Travel Specialists
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-10 max-w-sm">
-              Fermentum luctus convallis non lectus. Aliquam at ut viverra
-              noniqu arcu massa laoreet.
+              Have a question or need assistance with your booking? Our team is here to help.
             </p>
 
             {/* Our Office */}
@@ -31,31 +30,20 @@ const ContactUsPage = () => {
                 <div className="grid grid-cols-2 gap-6">
                   {/* Indonesia */}
                   <div>
-                    <p className="font-semibold text-foreground mb-3">Indonesia</p>
+                    <p className="font-semibold text-foreground mb-3">New Zealand</p>
                     <div className="flex items-start gap-2 mb-2">
                       <MapPin size={14} className="txt-main mt-0.5 shrink-0" />
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Jl. MH Thamrin No.1, Jakarta Pusat 10310
+                       New Zealand
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone size={14} className="txt-main shrink-0" />
-                      <p className="text-sm text-muted-foreground">+1 (333) 000-0000</p>
+                      <p className="text-sm text-muted-foreground">+xx xxxxx xxxxx</p>
                     </div>
-                  </div>
-
-                  {/* Australia */}
-                  <div>
-                    <p className="font-semibold text-foreground mb-3">Australia</p>
-                    <div className="flex items-start gap-2 mb-2">
-                      <MapPin size={14} className="txt-main mt-0.5 shrink-0" />
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        333 Collins, Melbourne VIC 3000, Australia
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone size={14} className="text-primary shrink-0" />
-                      <p className="text-sm text-muted-foreground">+2 (444) 000-0000</p>
+                    <div className="flex items-center mt-3 gap-2">
+                      <Mail size={14} className="txt-main shrink-0" />
+                      <p className="text-sm text-muted-foreground">info@milkywaytours.com</p>
                     </div>
                   </div>
                 </div>
@@ -64,15 +52,23 @@ const ContactUsPage = () => {
           </div>
 
           {/* Right Side - Form */}
-          <div className="lg:w-95 shrink-0 bg-card rounded-2xl shadow-lg p-8">
+          <div className="lg:w-100 shrink-0 bg-card rounded-2xl shadow-lg p-8">
             <div className="space-y-5">
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
-                <input placeholder="Your Name Here..." className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
+                <input placeholder="Full Name" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-                <input type="email" placeholder="Your Email Here..." className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
+                <input type="email" placeholder="Email" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
+              </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
+                <input type="tel" placeholder="Phone" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
+              </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Service Required</label>
+                <input type="text" placeholder="Service" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
@@ -93,9 +89,9 @@ const ContactUsPage = () => {
     </section>
 
 
-    <BookingSearchSection/>
+    {/* <BookingSearchSection/>
 
-    <FAQSection/>
+    <FAQSection/> */}
 
     </div>
   )

@@ -29,18 +29,25 @@ const AboutUsSection = () => {
             About Us
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight mb-6">
-            Empowering Your Travel
+            About MilkyWay
             <br />
-            Experience with Travique
+            Tours & Transfers
           </h2>
-          <p className="text-muted-foreground leading-relaxed mb-10 max-w-md">
-            Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu
-            arcu massa laoreet commodo ac. Fermentum luctus convallis. Aliquam at
-            ut viverra noniqu arcu massa laoreet
+          <p className="text-muted-foreground leading-relaxed max-w-md">
+            MilkyWay Tours & Transfers is a trusted travel service provider in New Zealand, 
+            focused on delivering smooth, comfortable, and reliable journeys.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-2 max-w-md">
+            Whether it’s an airport transfer or a scenic tour, we ensure every trip is planned 
+            with attention to detail and customer satisfaction.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-2 max-w-md">
+            Our goal is simple:
+            <span className="font-bold"> To make every journey effortless and memorable.</span>
           </p>
 
           {/* Stats */}
-          <div className="flex gap-10 mb-10">
+          {/* <div className="flex gap-10 mb-10">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl md:text-4xl font-extrabold text-foreground">
@@ -49,12 +56,12 @@ const AboutUsSection = () => {
                 <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA */}
-          <button onClick={()=> router.push('/tours')} className="bg-main cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
+          {/* <button onClick={()=> router.push('/tours')} className="bg-main cursor-pointer text-primary rounded-full px-8 py-3 text-sm font-medium hover:opacity-90 transition-opacity">
             Book Now
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
