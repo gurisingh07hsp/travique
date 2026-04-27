@@ -12,6 +12,15 @@ export interface ToursType {
   rating: number;
   createdAt: Date;
 }
+export interface ToursType2 {
+  title: string;
+  duration: string;
+  description: string;
+  includes: string[];
+  bestFor: string;
+  buttonText: string;
+  slug: string;
+}
 
 export interface BookingsType {
   _id: string,

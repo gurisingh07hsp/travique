@@ -49,78 +49,79 @@ const Navbar = () => {
                 <div className="absolute left-0 top-full mt-2 w-80 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <ul className="py-2">
                     <li>
-                      <Link href="/queenstown-airport-transfers" className="block px-4 py-2 hover:bg-gray-100">
-                        Queenstown Airport Transfers
+                      <Link href="/airport-transfer-package" className="block px-4 py-2 hover:bg-gray-100">
+                        Airport Transfer Package
                       </Link>
                     </li>
                     <li>
-                      <Link href="/queenstown-taxi-services" className="block px-4 py-2 hover:bg-gray-100">
-                        Queenstown Texi Services
+                      <Link href="/remarkables-ski-transfer-package" className="block px-4 py-2 hover:bg-gray-100">
+                        Remarkables Ski Transfer Package
                       </Link>
                     </li>
                   </ul>
                 </div>
           </li>
           <li className="relative group">
-            <div
-              className="flex items-center font-medium text-muted-foreground hover:text-foreground transition-colors"
+            <Link
+              href='/tours'
+              className="flex items-center font-medium cursor-pointer text-muted-foreground hover:text-foreground transition-colors"
             >
-              Day Tours
+              Tours
               <MoveDown size={14}/> 
-            </div>
+            </Link>
 
                 {/* Dropdown */}
                 <div className="absolute left-0 top-full mt-2 w-80 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <ul className="py-2">
                     <li>
-                      <Link href="/from-queenstown" className="block px-4 py-2 hover:bg-gray-100">
-                        From QueensTown
+                      <Link href="/queenstown-day-experience" className="block px-4 py-2 hover:bg-gray-100">
+                        Queenstown Day Experience
                       </Link>
                     </li>
                     <li>
-                      <Link href="/cardrona-sky-field" className="block px-4 py-2 hover:bg-gray-100">
-                        Cardrona Sky Field
+                      <Link href="/milford-sound-scenic-journey" className="block px-4 py-2 hover:bg-gray-100">
+                        Milford Sound Scenic Journey
                       </Link>
                     </li>
                     <li>
-                      <Link href="/remarkables-ski" className="block px-4 py-2 hover:bg-gray-100">
-                        Remarkables Ski
+                      <Link href="/christchurch-city-tour" className="block px-4 py-2 hover:bg-gray-100">
+                        Christchurch City Tour
                       </Link>
                     </li>
                     <li>
-                      <Link href="/coronet-ski" className="block px-4 py-2 hover:bg-gray-100">
-                        Coronet Ski
+                      <Link href="/custom-south-island-package" className="block px-4 py-2 hover:bg-gray-100">
+                        Custom South Island Package
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link href="/milford-sound-day-tour" className="block px-4 py-2 hover:bg-gray-100">
                         Milford Sound Day Tour
                       </Link>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <Link href="/luxury-private-wanaka-scenic-tour" className="block px-4 py-2 hover:bg-gray-100">
                         Luxury Private Wanaka Scenic Tour
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
           </li>
-          <li>
+          {/* <li>
             <Link
               href="/wine-tour"
               className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Wine Tour
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link
               href="/milford-tour"
               className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Milford Tour
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               href="blogs"
