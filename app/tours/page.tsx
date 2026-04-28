@@ -66,7 +66,7 @@ const page = () => {
             <div key={index} className="flex flex-col border border-gray-300 p-2 rounded-3xl ">
               {/* Image placeholder */}
               <div className="rounded-2xl aspect-4/3 mb-4" >
-                <img src='#' alt='' className='w-full h-full object-fill rounded-2xl' />
+                <img src={t.image} alt={t.title} className='w-full h-full object-fill rounded-2xl' />
               </div>
 
               {/* Location */}

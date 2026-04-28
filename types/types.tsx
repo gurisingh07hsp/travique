@@ -14,6 +14,7 @@ export interface ToursType {
 }
 export interface ToursType2 {
   title: string;
+  image: string;
   duration: string;
   description: string;
   includes: string[];
