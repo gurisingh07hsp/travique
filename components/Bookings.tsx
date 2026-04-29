@@ -83,10 +83,11 @@ const Bookings = () => {
                 <tr className="border-b border-border">
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium">Customer</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden lg:table-cell">Destination</th>
+                  <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden lg:table-cell">Locations</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden md:table-cell">Check In</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden md:table-cell">Check Out</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium hidden md:table-cell">Booking Date</th>
-                  <th className="text-left py-3 px-2 text-muted-foreground font-medium">Amount</th>
+                  <th className="text-left py-3 px-2 text-muted-foreground font-medium">Phone</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium">Payment</th>
                   <th className="text-left py-3 px-2 text-muted-foreground font-medium">Actions</th>
                 </tr>
@@ -99,10 +100,22 @@ const Bookings = () => {
                       <p className="text-xs text-muted-foreground">{b.email}</p>
                     </td>
                     <td className="py-3 px-2 text-muted-foreground hidden lg:table-cell">{typeof b.destination === 'object' ? b.destination?.location : b.destination}</td>
+                    <td className="py-3 px-2 text-muted-foreground hidden md:table-cell">
+                      <div>
+                        <div>
+                          <p>Pickup:</p>
+                          <p>{b?.pickupLocation}</p>
+                        </div>
+                        <div>
+                          <p>Drop:</p>
+                          <p>{b?.dropoffLocation}</p>
+                        </div>
+                      </div>
+                    </td>
                     <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.departureDate).toLocaleDateString()}</td>
                     <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.returnDate).toLocaleDateString()}</td>
                     <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.createdAt).toLocaleDateString()}</td>
-                    <td className="py-3 px-2 font-medium text-foreground">{typeof b.destination === 'object' ? b.destination?.price : 'N/A'}</td>
+                    <td className="py-3 px-2 font-medium text-foreground">{b.phone}</td>
                     <td className="py-3 px-2">
                       <div className={`text-xs rounded-2xl w-[70%] text-center capitalize ${statusColors[b.payment]}`}>
                         {b.payment}

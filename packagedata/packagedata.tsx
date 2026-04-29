@@ -41,7 +41,7 @@ export const PackageData = [
     },
     {
         title: 'Custom Private Tour',
-        image: '#',
+        image: '/packageImages/CustomPrivateTour.jpg',
         duration: 'Multi-Day',
         description: 'Plan your dream trip across New Zealand with a fully customized itinerary. Travel at your own pace with complete flexibility and comfort.',
         includes: ['Personalized itinerary','Private vehicle','Flexible stops','Dedicated driver'],
@@ -51,7 +51,7 @@ export const PackageData = [
     },
     {
         title: 'Airport Transfer Service',
-        image: '#',
+        image: '/packageImages/AirportTransferService.jpg',
         duration: 'As per booking',
         description: 'Reliable and on-time airport transfers for a smooth start or end to your journey.',
         includes: ['Flight tracking','On-time pickup','Meet & greet (optional)','Comfortable vehicles'],

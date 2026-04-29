@@ -30,7 +30,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="about"
+              href="/about"
               className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               About Us
@@ -38,7 +38,7 @@ const Navbar = () => {
           </li>
           <li className="relative group">
             <Link
-              href="services"
+              href="/services"
               className="flex items-center font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Services
@@ -93,38 +93,12 @@ const Navbar = () => {
                         Custom South Island Package
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link href="/milford-sound-day-tour" className="block px-4 py-2 hover:bg-gray-100">
-                        Milford Sound Day Tour
-                      </Link>
-                    </li> */}
-                    {/* <li>
-                      <Link href="/luxury-private-wanaka-scenic-tour" className="block px-4 py-2 hover:bg-gray-100">
-                        Luxury Private Wanaka Scenic Tour
-                      </Link>
-                    </li> */}
                   </ul>
                 </div>
           </li>
-          {/* <li>
-            <Link
-              href="/wine-tour"
-              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Wine Tour
-            </Link>
-          </li> */}
-          {/* <li>
-            <Link
-              href="/milford-tour"
-              className="font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Milford Tour
-            </Link>
-          </li> */}
           <li>
             <Link
-              href="blogs"
+              href="/blogs"
               className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Blogs
@@ -132,7 +106,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="contact"
+              href="/contact"
               className="font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact Us
@@ -141,7 +115,7 @@ const Navbar = () => {
             {user && user.role === 'admin' && (
             <li>
               <Link
-                href="admin"
+                href="/admin"
                 className="font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 Admin
@@ -188,25 +162,66 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link onClick={()=>setMobileOpen(false)} href="about" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link onClick={()=>setMobileOpen(false)} href="services" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="/services" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Services
                 </Link>
               </li>
               <li>
-                <Link onClick={()=>setMobileOpen(false)} href="blogs" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="/airport-transfer-package" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Airport Transfer Package
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/remarkables-ski-transfer-package" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Remarkables Ski Transfer Package
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/queenstown-day-experience" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Queenstown Day Experience
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/milford-sound-scenic-journey" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Milford Sound Scenic Journey
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/christchurch-city-tour" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Christchurch City Tour
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/custom-south-island-package" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Custom South Island Package
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/blogs" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link onClick={()=>setMobileOpen(false)} href="contact" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                <Link onClick={()=>setMobileOpen(false)} href="/contact" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Contact Us
                 </Link>
               </li>
+              {user && user.role === 'admin' && (
+              <li>
+                <Link
+                  onClick={()=>setMobileOpen(false)}
+                  href="/admin"
+                  className="font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Admin
+                </Link>
+              </li>
+              )}
           </ul>
 
           {user ? (

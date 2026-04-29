@@ -15,8 +15,8 @@ export default function Footer() {
             <img src='/logo.png' alt="logo" className="md:w-48 w-28 rounded-lg" />
           </div>
 
-          <p className="text-gray-400 text-sm leading-relaxed max-w-50">
-            Leo elementum iaculis quam massa vitae odio sed. Morbi tincidunt senectus.
+          <p className="text-sm leading-relaxed max-w-50">
+            Milky Ways Tour is a modern travel platform offering exciting and well-planned tour experiences across top destinations.
           </p>
 
           {/* Social icons */}
@@ -54,28 +54,44 @@ export default function Footer() {
         {/* Navigation */}
         <div>
           <h4 className="font-semibold text-gray-900 mb-5">Navigation</h4>
-          <ul className="space-y-3 text-sm text-gray-400">
-            {["Home", "About Us", "Services", "Blogs"].map((item) => (
-              <li key={item}>
-                <a href="#" className="hover:text-amber-500 transition-colors">
-                  {item}
+          <ul className="space-y-3 text-sm">
+              <li>
+                <a href="/" className="hover:text-amber-500 transition-colors">
+                  Home
                 </a>
               </li>
-            ))}
+              <li>
+                <a href="/about" className="hover:text-amber-500 transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/blogs" className="hover:text-amber-500 transition-colors">
+                  Blogs
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-amber-500 transition-colors">
+                  Contact Us
+                </a>
+              </li>
           </ul>
         </div>
 
         {/* Services */}
         <div>
           <h4 className="font-semibold text-gray-900 mb-5">Services</h4>
-          <ul className="space-y-3 text-sm text-gray-400">
-            {["Holiday Package", "Corporate Travel", "Custom Tours"].map((item) => (
-              <li key={item}>
-                <a href="#" className="hover:text-amber-500 transition-colors">
-                  {item}
+          <ul className="space-y-3 text-sm">
+              <li>
+                <a href="/airport-transfer-package" className="hover:text-amber-500 transition-colors">
+                  Airport Transfer Service
                 </a>
               </li>
-            ))}
+              <li>
+                <a href="/airport-transfer-package" className="hover:text-amber-500 transition-colors">
+                  Remarkables Ski Transfer Service
+                </a>
+              </li>
           </ul>
         </div>
 
@@ -90,7 +106,7 @@ export default function Footer() {
               placeholder="Enter your email.."
               className="w-full bg-gray-100 rounded-full px-5 py-3 text-sm text-gray-600 placeholder-gray-400 outline-none focus:ring-2 focus:ring-amber-300 transition"
             />
-            <button className="w-fit bg-main hover:bg-amber-500 transition-colors text-white text-sm font-semibold px-6 py-3 rounded-full">
+            <button className="w-fit bg-main cursor-pointer hover:bg-amber-500 transition-colors text-white text-sm font-semibold px-6 py-3 rounded-full">
               Learn More
             </button>
           </div>
@@ -102,9 +118,9 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
           <p>Copyigt © 2026 MilkyWay Tours & Transfers &nbsp;|    </p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-amber-500 transition-colors">Terms of Use</a>
+            <p className="hover:text-amber-500 transition-colors">Terms of Use</p>
             <span>|</span>
-            <a href="#" className="hover:text-amber-500 transition-colors">Privacy Policy</a>
+            <p className="hover:text-amber-500 transition-colors">Privacy Policy</p>
           </div>
         </div>
       </div>

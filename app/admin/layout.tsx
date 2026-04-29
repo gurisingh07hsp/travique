@@ -150,7 +150,7 @@ import axios from "axios";
 
 const navItems = [
   { title: "Dashboard", path: "/admin", icon: LayoutDashboard },
-  { title: "Tour Packages", path: "/admin/packages", icon: MapPin },
+  // { title: "Tour Packages", path: "/admin/packages", icon: MapPin },
   { title: "Bookings", path: "/admin/bookings", icon: CalendarCheck },
   { title: "Blog Posts", path: "/admin/blog", icon: FileText },
 ];
@@ -173,7 +173,7 @@ export default function AdminLayout({
 
   useEffect(()=> {
     const isAdmin = async() => {
-      const response = await axios.get('api/auth/me', {withCredentials: true});
+      const response = await axios.get('/api/auth/me', {withCredentials: true});
       if(response.status === 200){
         if(response?.data?.user?.role !== 'admin'){
           router.push('/');
@@ -297,22 +297,12 @@ export default function AdminLayout({
               color: "inherit",
             }}
           >
+            {showLabels && (
             <img
               src="/logo.png"
-              style={{ height: 32, width: 32, flexShrink: 0 }}
+              style={{ height: 40, width: 130, flexShrink: 0}}
               alt="logo"
             />
-            {showLabels && (
-              <span
-                style={{
-                  fontWeight: 700,
-                  fontSize: 18,
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                }}
-              >
-                Milky Ways Tours
-              </span>
             )}
           </Link>
 
@@ -373,7 +363,7 @@ export default function AdminLayout({
                 fontSize: 14,
                 textDecoration: "none",
                 color: isActive(item.path) ? "#ffffff" : "#374151",
-                backgroundColor: isActive(item.path) ? "var(--color-main, #f1ac32)" : "transparent",
+                backgroundColor: isActive(item.path) ? "var(--color-main, #ff7528)" : "transparent",
                 transition: "background-color 0.15s",
               }}
               onMouseEnter={(e) => {

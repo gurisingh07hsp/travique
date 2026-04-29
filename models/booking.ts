@@ -16,8 +16,14 @@ const BookingSchema = new mongoose.Schema({
   nationality: String,
   passportNo: String,
   destination: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Tour"
+    type: String,
+    required: true
+  },
+  pickupLocation: {
+    type: String,
+  },
+  dropoffLocation: {
+    type: String,
   },
   departureDate: {
     type: Date,

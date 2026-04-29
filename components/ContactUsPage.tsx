@@ -39,7 +39,7 @@ const ContactUsPage = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone size={14} className="txt-main shrink-0" />
-                      <p className="text-sm text-muted-foreground">+xx xxxxx xxxxx</p>
+                      <p className="text-sm text-muted-foreground">+64 2108111920</p>
                     </div>
                     <div className="flex items-center mt-3 gap-2">
                       <Mail size={14} className="txt-main shrink-0" />

@@ -111,58 +111,11 @@ const TestimonialSection = () => {
             Testimonial
           </p>
           <h2 className="text-4xl font-extrabold text-gray-900 leading-tight mb-5">
-            Don&apos;t Believe Me
+            What Our
             <br />
-            Check What Client
-            <br />
-            Think Us
+            Clients Say
           </h2>
-
-          {/* Navigation buttons */}
-          {/* <div className="flex items-center gap-3">
-            <button
-              onClick={prev}
-              aria-label="Previous testimonial"
-              className="w-10 h-10 rounded-full cursor-pointer border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#FF7528] hover:text-[#FF7528] transition-colors"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={next}
-              aria-label="Next testimonial"
-              className="w-10 h-10 rounded-full cursor-pointer bg-main flex items-center justify-center text-white transition-colors shadow-md"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div> */}
         </div>
-
-        {/* Right: Cards */}
-{/* <div className="w-full h-full bg-[url('/worldmap.png')] bg-cover bg-center bg-no-repeat"> */}
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-wrap justify-center gap-6 items-center">
             {visibleIndices.map((idx, pos) => (
@@ -174,22 +127,7 @@ const TestimonialSection = () => {
             ))}
           </div>
         </div>
-        {/* </div> */}
       </div>
-
-      {/* Dot indicators */}
-      {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-        {testimonials.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            aria-label={`Go to testimonial ${i + 1}`}
-            className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
-              i === current ? "bg-main w-5" : "bg-gray-300 w-2"
-            }`}
-          />
-        ))}
-      </div> */}
     </section>
   )
 }

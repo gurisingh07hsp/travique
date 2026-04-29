@@ -31,6 +31,8 @@ export interface BookingsType {
   nationality: string,
   passportNo: string,
   destination: string | ToursType,
+  pickupLocation: string;
+  dropoffLocation: string;
   departureDate: Date,
   returnDate: Date,
   adults: number,
