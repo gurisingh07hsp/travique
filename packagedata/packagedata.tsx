@@ -41,7 +41,7 @@ export const PackageData = [
     },
     {
         title: 'Custom Private Tour',
-        image: '/packageImages/CustomPrivateTour.jpg',
+        image: '/packageImages/CustomPrivateTour1.jpg',
         duration: 'Multi-Day',
         description: 'Plan your dream trip across New Zealand with a fully customized itinerary. Travel at your own pace with complete flexibility and comfort.',
         includes: ['Personalized itinerary','Private vehicle','Flexible stops','Dedicated driver'],

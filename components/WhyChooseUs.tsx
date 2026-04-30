@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
           </div>
 
           <div>
-            <img src="/whychooseus.jpg" className="rounded-3xl" alt="whychooseus" />
+            <img src="/whychooseus1.jpg" className="rounded-3xl" alt="whychooseus" />
           </div>
         </div>
       </div>
