@@ -1,5 +1,8 @@
-import React from 'react'
+'use client';
+import { useEffect, useState } from 'react'
 import BlogCard from './BlogCard';
+import { BlogType } from '@/types/types';
+import axios from 'axios';
 const blogPosts = [
   {
     badge: "Destinations",
@@ -33,6 +36,18 @@ const blogPosts = [
   },
 ];
 const BlogPage = () => {
+    const [blogs, setBlogs] = useState<BlogType[]>([])
+    const getBlogs = async()=> {
+    const response = await axios.get('/api/blogs');
+    if(response.status === 200){
+      setBlogs(response.data);
+    }
+    console.log(response.data);
+  }
+
+  useEffect(()=>{
+    getBlogs();
+  },[]);
   return (
     <section className="py-20 px-6 md:px-16 lg:px-20 bg-background">
       <div className="max-w-6xl mx-auto">
@@ -52,7 +67,7 @@ const BlogPage = () => {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
+          {blogs.map((post, index) => (
             <BlogCard key={index} {...post} />
           ))}
         </div>

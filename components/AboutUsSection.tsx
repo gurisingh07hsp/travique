@@ -7,7 +7,7 @@ const AboutUsSection = () => {
         {/* Left Image */}
         <div className="rounded-3xl overflow-hidden aspect-square bg-muted">
           <img
-            src={'/aboutUsImage.png'}
+            src={'/AboutUsImage.png'}
             alt="Travel experience"
             className="w-full h-full object-cover"
           />

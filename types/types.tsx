@@ -41,3 +41,15 @@ export interface BookingsType {
   payment: 'pending'|'done',
   createdAt: Date,
 }
+
+export interface BlogType {
+  _id: string;
+  title: string;
+  image: string;
+  description: string;
+  content: string;
+  category: string;
+  isPublished: boolean;
+  slug: string;
+  createdAt: Date;
+}

@@ -1,4 +1,5 @@
 'use client'
+import BlogManagement from "@/components/BlogManagement";
 import Bookings from "@/components/Bookings";
 import Customers from "@/components/Customers";
 import Packages from "@/components/Packages";
@@ -11,6 +12,7 @@ export default function Page() {
       {pagename == 'bookings' && <Bookings/>}
       {pagename == 'customers' && <Customers/>}
       {pagename == 'packages' && <Packages/>}
+      {pagename == 'blog' && <BlogManagement/>}
     </>
   );
 }
