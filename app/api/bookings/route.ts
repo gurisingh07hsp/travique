@@ -49,5 +49,5 @@ export async function POST(req: Request) {
     // 4. Send mail
     await transporter.sendMail(mailOptions);
 
-  return NextResponse.json('fiefie');
+  return NextResponse.json(booking);
 }
