@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   const data = await req.json();
 
-  // const booking = await Booking.create(data);
+  const booking = await Booking.create(data);
       // 2. Create transporter (Gmail example)
     const transporter = nodemailer.createTransport({
       service: "gmail",
