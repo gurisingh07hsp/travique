@@ -20,6 +20,7 @@ const BookNow = () => {
   const [step, setStep] = useState(1);
   const [departureDate, setDepartureDate] = useState<Date>();
   const [returnDate, setReturnDate] = useState<Date>();
+  const [loading, setLoading] = useState(false);
 
   console.log('steps  :', step);
 
@@ -53,12 +54,14 @@ const BookNow = () => {
   };
 
   const handleSubmit = async() => {
+    setLoading(true);
     const response = await axios.post('/api/bookings',form);
     if(response.status == 200){
       setStep(3); 
       console.log(response.data);
+      setLoading(false);
     }
-
+    setLoading(false);
   };
 
   const canProceedStep1 = form.name && form.email && form.phone;
@@ -229,8 +232,8 @@ const BookNow = () => {
 
                 <div className="flex justify-between pt-4">
                   <button onClick={() => setStep(1)} className="rounded-full border cursor-pointer px-6">Back</button>
-                  <button onClick={() => {handleSubmit()}} className="rounded-full px-4 cursor-pointer flex items-center bg-main py-2">
-                    Book Now
+                  <button disabled={loading} onClick={() => {handleSubmit()}} className="rounded-full px-4 cursor-pointer flex items-center bg-main py-2">
+                    {loading ? 'Booking...' : 'Book Now'}
                     <ChevronRight size={16} />
                   </button>
                 </div>

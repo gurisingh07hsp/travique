@@ -161,12 +161,12 @@ export default function BlogFormModal({
                 <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-3 py-1 mb-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
                   <span className="text-amber-400 text-[10px] tracking-[0.18em] uppercase font-semibold">
-                    {mode === "edit" ? "Edit Tour" : "New Tour"}
+                    {mode === "edit" ? "Edit Blog" : "New Blog"}
                   </span>
                 </div>
                 <h2 className="text-white text-2xl font-bold leading-tight"
                   style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                  {mode === "edit" ? "Update Tour Package" : "Create Tour Package"}
+                  {mode === "edit" ? "Update Blog" : "Create Blog"}
                 </h2>
                 <p className="text-white/30 text-xs mt-1 font-light tracking-wide" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   Fill in the details below to {mode === "edit" ? "update the" : "add a new"} blog
@@ -271,7 +271,7 @@ export default function BlogFormModal({
              <div>
             <label className="text-white/50 text-[11px] tracking-[0.12em] uppercase font-semibold mr-2 mb-2"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >isPublished</label>
+            >Published</label>
                   <input type="checkbox" checked={form.isPublished} onChange={(e)=> setForm({...form, isPublished: e.target.checked})} />
                 </div>
             </div>
