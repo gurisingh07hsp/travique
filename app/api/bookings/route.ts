@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     // 3. Mail content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: data.email,
+      to: 'starlightcarrentals11@gmail.com',
       subject: "Booking Request Received",
       html: `
       <!DOCTYPE html>
