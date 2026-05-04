@@ -14,7 +14,6 @@ const BookingSchema = new mongoose.Schema({
     required: true,
   },
   nationality: String,
-  passportNo: String,
   destination: {
     type: String,
     required: true

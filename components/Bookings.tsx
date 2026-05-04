@@ -4,17 +4,6 @@ import { Search, Filter, Download, Eye, MoreHorizontal, Plus } from "lucide-reac
 import { BookingsType } from "@/types/types";
 import axios from "axios";
 
-// const bookings = [
-//   { id: "BK-001", customer: "Sarah Johnson", email: "sarah@email.com", destination: "Bali, Indonesia", checkIn: "Apr 15, 2026", checkOut: "Apr 22, 2026", guests: 2, amount: "$2,450", status: "confirmed" },
-//   { id: "BK-002", customer: "Michael Chen", email: "michael@email.com", destination: "Paris, France", checkIn: "Apr 18, 2026", checkOut: "Apr 25, 2026", guests: 3, amount: "$3,200", status: "pending" },
-//   { id: "BK-003", customer: "Emma Wilson", email: "emma@email.com", destination: "Tokyo, Japan", checkIn: "May 01, 2026", checkOut: "May 10, 2026", guests: 2, amount: "$4,100", status: "confirmed" },
-//   { id: "BK-004", customer: "James Brown", email: "james@email.com", destination: "Maldives", checkIn: "May 05, 2026", checkOut: "May 12, 2026", guests: 4, amount: "$5,800", status: "cancelled" },
-//   { id: "BK-005", customer: "Lisa Anderson", email: "lisa@email.com", destination: "Dubai, UAE", checkIn: "May 10, 2026", checkOut: "May 15, 2026", guests: 1, amount: "$2,900", status: "confirmed" },
-//   { id: "BK-006", customer: "David Kim", email: "david@email.com", destination: "Rome, Italy", checkIn: "May 20, 2026", checkOut: "May 27, 2026", guests: 2, amount: "$3,600", status: "pending" },
-//   { id: "BK-007", customer: "Anna Martinez", email: "anna@email.com", destination: "Santorini, Greece", checkIn: "Jun 01, 2026", checkOut: "Jun 08, 2026", guests: 2, amount: "$4,200", status: "confirmed" },
-//   { id: "BK-008", customer: "Robert Taylor", email: "robert@email.com", destination: "London, UK", checkIn: "Jun 10, 2026", checkOut: "Jun 17, 2026", guests: 3, amount: "$3,800", status: "pending" },
-// ];
-
 const statusColors: Record<string, string> = {
   done: "bg-emerald-500/10 text-emerald-600 border-emerald-200",
   pending: "bg-amber-500/10 text-amber-600 border-amber-200",

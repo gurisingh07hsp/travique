@@ -6,14 +6,14 @@ const FeaturedTours = () => {
     const router = useRouter();
     const [tours, setTours] = useState(PackageData.slice(0,4));
   return (
-    <div className="max-w-7xl mx-auto my-8 px-8">
+    <div className="max-w-7xl mx-auto my-12 px-8">
         <h2 className="text-3xl md:text-4xl font-extrabold text-foreground text-center mb-14">
           Featured Tours
         </h2>
         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Popular Experiences</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-14">
           {tours?.map((t,index) => (
-            <div key={index} className="flex flex-col border border-gray-300 p-2 rounded-3xl ">
+            <div onClick={()=> router.push(`/${t.slug}`)} key={index} className="flex flex-col border border-gray-300 cursor-pointer p-2 rounded-3xl ">
               <div className="rounded-2xl aspect-4/3 mb-4" >
                 <img src={t.image} alt={t.title} className='w-full h-full object-fill rounded-2xl' />
               </div>
@@ -33,7 +33,7 @@ const FeaturedTours = () => {
                   {service.price}
                 
                 </span> */}
-                <a href={`${t.slug}`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
+                <a href={`/${t.slug}`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
                   Book Now
                   {/* <ChevronRight size={14} /> */}
                 </a>

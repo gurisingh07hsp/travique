@@ -28,7 +28,6 @@ export interface BookingsType {
   name: string,
   email: string,
   phone: string,
-  nationality: string,
   passportNo: string,
   destination: string | ToursType,
   pickupLocation: string;

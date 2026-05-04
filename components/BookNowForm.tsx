@@ -18,8 +18,6 @@ import Link from "next/link";
 const BookNow = () => {
   const {name} = useParams();
   const [step, setStep] = useState(1);
-  const [departureDate, setDepartureDate] = useState<Date>();
-  const [returnDate, setReturnDate] = useState<Date>();
   const [loading, setLoading] = useState(false);
 
   console.log('steps  :', step);
@@ -29,7 +27,6 @@ const BookNow = () => {
     email: "",
     phone: "",
     nationality: "",
-    passportNo: "",
     destination: "",
     pickupLocation: "",
     dropoffLocation: "",
@@ -65,7 +62,7 @@ const BookNow = () => {
   };
 
   const canProceedStep1 = form.name && form.email && form.phone;
-  const canProceedStep2 = form.destination && departureDate && returnDate;
+  // const canProceedStep2 = form.destination && form.departureDate && form.returnDate;
 
   const steps = [
     { num: 1, label: "Personal Info", icon: User },
@@ -157,10 +154,10 @@ const BookNow = () => {
                       <input id="nationality" placeholder="United States" className="pl-10 p-2 border w-full rounded-lg" value={form.nationality} onChange={(e) => updateForm("nationality", e.target.value)} />
                     </div>
                   </div>
-                  <div className="space-y-2 flex flex-col">
+                  {/* <div className="space-y-2 flex flex-col">
                     <label htmlFor="passportNo">Passport Number</label>
                     <input className="border p-2 rounded-lg" id="passportNo" placeholder="AB1234567" value={form.passportNo} onChange={(e) => updateForm("passportNo", e.target.value)} />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="flex justify-end pt-4">

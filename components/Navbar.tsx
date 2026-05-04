@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Menu, MoveDown, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import AuthModal from "./authModal";
 import { useUser } from "@/context/UserContext";
@@ -39,10 +39,10 @@ const Navbar = () => {
           <li className="relative group">
             <Link
               href="/services"
-              className="flex items-center font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-x-0.5 font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Services
-              <MoveDown size={14}/> 
+              <img src="/dropdown.svg" className="w-6" alt="" />
             </Link>
 
                 {/* Dropdown */}
@@ -64,10 +64,10 @@ const Navbar = () => {
           <li className="relative group">
             <Link
               href='/tours'
-              className="flex items-center font-medium cursor-pointer text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-x-0.5 font-medium cursor-pointer text-muted-foreground hover:text-foreground transition-colors"
             >
               Tours
-              <MoveDown size={14}/> 
+               <img src="/dropdown.svg" className="w-6" alt="" />
             </Link>
 
                 {/* Dropdown */}
