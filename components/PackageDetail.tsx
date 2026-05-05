@@ -102,8 +102,8 @@ const PackageDetail = () => {
  
           {tour.includes.map((item,index)=>(
             <div key={index} className="space-y-5">
-              <div className="flex mt-3 items-center gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#2e2e2e] flex items-center justify-center text-gray-300 shrink-0">
+              <div className="flex mt-3 items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-[#2e2e2e] flex items-center justify-center text-gray-300 shrink-0">
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm">{item}</p>

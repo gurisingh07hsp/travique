@@ -151,7 +151,7 @@ const BookNow = () => {
                     <label htmlFor="nationality">Nationality</label>
                     <div className="relative">
                       <Globe size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
-                      <input id="nationality" placeholder="United States" className="pl-10 p-2 border w-full rounded-lg" value={form.nationality} onChange={(e) => updateForm("nationality", e.target.value)} />
+                      <input id="nationality" className="pl-10 p-2 border w-full rounded-lg" value={form.nationality} onChange={(e) => updateForm("nationality", e.target.value)} />
                     </div>
                   </div>
                   {/* <div className="space-y-2 flex flex-col">
@@ -224,12 +224,12 @@ const BookNow = () => {
 
                 <div className="space-y-2 flex flex-col">
                   <label htmlFor="specialRequests">Special Requests</label>
-                  <textarea className="border py-2 px-2 rounded-lg h-28" id="specialRequests" placeholder="Any dietary requirements, accessibility needs, or special occasions..." value={form.specialRequests} onChange={(e) => updateForm("specialRequests", e.target.value)} />
+                  <textarea className="border py-2 px-2 rounded-lg h-28" id="specialRequests" value={form.specialRequests} onChange={(e) => updateForm("specialRequests", e.target.value)} />
                 </div>
 
                 <div className="flex justify-between pt-4">
                   <button onClick={() => setStep(1)} className="rounded-full border cursor-pointer px-6">Back</button>
-                  <button disabled={loading} onClick={() => {handleSubmit()}} className="rounded-full px-4 cursor-pointer flex items-center bg-main py-2">
+                  <button disabled={loading} onClick={() => {handleSubmit()}} className="rounded-full text-white px-4 cursor-pointer flex items-center bg-main py-2">
                     {loading ? 'Booking...' : 'Book Now'}
                     <ChevronRight size={16} />
                   </button>
@@ -263,7 +263,7 @@ const BookNow = () => {
         </svg>
       </div>
 
-      <h1 className="text-4xl font-bold">
+      <h1 className="text-4xl text-center font-bold">
         Booking Confirmed!
       </h1>
 
