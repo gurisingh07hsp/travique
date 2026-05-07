@@ -1,6 +1,6 @@
 import AboutUsSection from './AboutUsSection'
 import HowItWorksSection from './HowItWorksSection';
-import TeamSection from './TeamSection';
+import TeamSection from './PopularSearchSection';
 import VisionMissionSection from './VisionMissionSection'
 import { Clock, Award } from "lucide-react";
 const AboutUsPage = () => {

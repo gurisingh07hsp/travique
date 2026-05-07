@@ -13,9 +13,9 @@ const FeaturedTours = () => {
         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Popular Experiences</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-14">
           {tours?.map((t,index) => (
-            <div onClick={()=> router.push(`/${t.slug}`)} key={index} className="flex flex-col border border-gray-300 cursor-pointer p-2 rounded-3xl ">
+            <div onClick={()=> router.push(`/${t.slug}`)} key={index} className="flex flex-col shadow cursor-pointer p-2 rounded-2xl ">
               <div className="rounded-2xl aspect-4/3 mb-4" >
-                <img src={t.image} alt={t.title} className='w-full h-full object-fill rounded-2xl' />
+                <img src={t.image} alt={t.title} className='w-full h-full object-fill shadow rounded-lg' />
               </div>
 
              
@@ -26,8 +26,6 @@ const FeaturedTours = () => {
 
            
               <h3 className="text-lg font-bold text-foreground mb-3">{t.title}</h3>
-
-    
               <div className="flex items-center justify-between bg-main text-primary rounded-full px-5 py-2.5">
                 {/* <span className="text-sm font-bold text-primary-foreground">
                   {service.price}

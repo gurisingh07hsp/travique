@@ -1,5 +1,5 @@
 import React from 'react'
-import TeamSection from './TeamSection'
+// import TeamSection from './PopularSearchSection'
 import VisionMissionSection from './VisionMissionSection';
 import GetStartContainer from './GetStartContainer';
 const values = [
@@ -11,7 +11,7 @@ const values = [
 const TeamPage = () => {
   return (
     <div>
-      <TeamSection/>
+      {/* <TeamSection/> */}
 
       <section className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

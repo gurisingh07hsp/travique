@@ -30,6 +30,10 @@ const WhyChooseUs = () => {
 
           {/* Right – Why Choose Us */}
           <div>
+            <img src="/whychooseus1.jpg" className="object-contain rounded-t-full" alt="whychooseus" />
+          </div>
+
+          <div>
             <span className="text-xs font-semibold tracking-[0.2em] uppercase txt-main mb-3 block">
               Why Choose Us
             </span>
@@ -53,9 +57,6 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div>
-            <img src="/whychooseus1.jpg" className="rounded-3xl" alt="whychooseus" />
-          </div>
         </div>
       </div>
     </section>
