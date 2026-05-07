@@ -21,14 +21,14 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content Overlay */}
-        <div className="relative z-10 flex flex-col justify-between h-full min-h-90 md:min-h-150 lg:min-h-170 ps-2 md:ps-0 md:p-12 lg:p-16">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full min-h-90 md:min-h-150 lg:min-h-170 ps-2 md:ps-0 md:p-12 lg:p-16">
           {/* Top Content */}
-          <div className="flex justify-between items-center h-80 flex-col">
+          <div className="flex justify-between items-center h-full flex-col">
 
             {/* Heading */}
             <div>
               <p className='text-white text-center'>All you need is MilkyWayTours</p>
-              <h1 className="text-3xl text-center md:text-4xl lg:text-5xl font-extrabold mt-2 text-white leading-[1.1] tracking-tight mb-4">
+              <h1 className="text-2xl text-center md:text-4xl lg:text-5xl font-extrabold mt-2 px-2 text-white leading-[1.1] tracking-tight mb-4">
                 Reliable Airport Transfers & Private Tours<br />
                 {/* <br /> */}
                 Across New Zealand
