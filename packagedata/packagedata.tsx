@@ -30,7 +30,7 @@ export const PackageData = [
         slug: 'christchurch-city-tour'
     },
     {
-        title: 'Ski Field Transport – The Remarkables',
+        title: 'Ski Field Transport',
         image: '/packageImages/SkiFieldTransport.png',
         duration: 'Daily Transfers',
         description: 'Enjoy stress-free travel to one of Queenstown’s top ski destinations. Skip the hassle of driving and focus on your skiing experience.',
@@ -51,7 +51,7 @@ export const PackageData = [
     },
     {
         title: 'Airport Transfer Service',
-        image: '/packageImages/AirportTransferService.jpg',
+        image: '/packageImages/AirportTransferService.jpeg',
         duration: 'As per booking',
         description: 'Reliable and on-time airport transfers for a smooth start or end to your journey.',
         includes: ['Flight tracking','On-time pickup','Meet & greet (optional)','Comfortable vehicles'],

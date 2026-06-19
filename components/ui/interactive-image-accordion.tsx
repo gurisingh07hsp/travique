@@ -8,27 +8,27 @@ const accordionItems = [
   {
     id: 1,
     title: 'Milford Sound',
-    imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1974&auto=format&fit=crop',
+    imageUrl: '/hero1.jpeg',
   },
   {
     id: 2,
     title: 'Queenstown',
-    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: '/hero2.jpeg',
   },
   {
     id: 3,
     title: 'Airport Transfers',
-    imageUrl: 'https://images.unsplash.com/photo-1485216664695-8409ef09c32e?q=80&w=1974&auto=format&fit=crop',
+    imageUrl: '/hero3.jpeg',
   },
   {
     id: 4,
     title: 'Private Tours',
-    imageUrl: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2090&auto=format&fit=crop',
+    imageUrl: '/hero6.jpeg',
   },
   {
     id: 5,
     title: 'Ski Transport',
-    imageUrl: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: '/hero5.jpeg',
   },
 ];
 
@@ -46,9 +46,9 @@ const AccordionItem = ({ item, isActive, onMouseEnter }: AccordionItemProps) => 
   return (
     <div
       className={`
-        relative h-[400px] md:h-[450px] rounded-2xl overflow-hidden cursor-pointer
+        relative h-100 md:h-112.5 rounded-2xl overflow-hidden cursor-pointer
         transition-all duration-700 ease-in-out
-        ${isActive ? 'w-[300px] md:w-[400px]' : 'w-[50px] md:w-[60px]'}
+        ${isActive ? 'w-75 md:w-100' : 'w-12.5 md:w-15'}
       `}
       onMouseEnter={onMouseEnter}
     >
@@ -64,10 +64,10 @@ const AccordionItem = ({ item, isActive, onMouseEnter }: AccordionItemProps) => 
         }}
       />
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
 
       {/* Caption Text */}
-      <span
+      {/* <span
         className={`
           absolute text-white text-lg font-semibold whitespace-nowrap
           transition-all duration-300 ease-in-out
@@ -79,7 +79,7 @@ const AccordionItem = ({ item, isActive, onMouseEnter }: AccordionItemProps) => 
         `}
       >
         {item.title}
-      </span>
+      </span> */}
     </div>
   );
 };
