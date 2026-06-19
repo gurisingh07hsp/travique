@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarAndFooterProvider from "@/components/NavbarAndFooterProvider";
 import { UserProvider } from "@/context/UserContext";
+import WhatsappButton from "@/components/WhatsappButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,6 +28,9 @@ export default function RootLayout({
         <UserProvider>
         <NavbarAndFooterProvider>
         {children}
+        <WhatsappButton
+          phoneNumber="642108111920"
+        />
         </NavbarAndFooterProvider>
         </UserProvider>
       </body>
