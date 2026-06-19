@@ -41,14 +41,7 @@ const PackageDetail = () => {
 
   return (
 
-        <div className="min-h-screen font-sans">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
-        * { font-family: 'DM Sans', sans-serif; }
-        .font-display { font-family: 'Playfair Display', Georgia, serif; }
-      `}</style>
-
- 
+        <div className="min-h-screen">
       {/* Main Grid */}
       <div className="max-w-7xl mx-auto mt-6 px-6 pb-24 grid grid-cols-1 lg:grid-cols-3 gap-10">
  
@@ -66,7 +59,7 @@ const PackageDetail = () => {
           </div>
  
           {/* Title */}
-          <h1 style={{fontFamily:"'Playfair Display',Georgia,serif"}} className="font-bold text-4xl md:text-5xl text-[#1a1a1a] leading-tight mb-2">
+          <h1 className="font-bold text-4xl md:text-5xl text-[#1a1a1a] leading-tight mb-2">
             {tour.title}
           </h1>
 
@@ -95,7 +88,7 @@ const PackageDetail = () => {
           {/* Package Includes Card */}
           <div className="bg-[#1c1c1c] rounded-3xl p-7 text-white sticky top-20">
             <div className="flex justify-center mb-5">
-              <span className="bg-[#2e2e2e] text-white font-semibold text-lg px-7 py-2.5 rounded-full" style={{fontFamily:"'Playfair Display',Georgia,serif"}}>
+              <span className="bg-[#2e2e2e] text-white font-semibold text-lg px-7 py-2.5 rounded-full">
                 Package Include:
               </span>
             </div>

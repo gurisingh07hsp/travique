@@ -3,7 +3,6 @@ import FeaturedTours from "@/components/FeaturedTours";
 import HeroSection from "@/components/HeroSection";
 import PopularSearchSection from "@/components/PopularSearchSection";
 import ServicesSection from "@/components/ServicesSection";
-import TestimonialSection from "@/components/TestimonialSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <AboutUsSection/>
       <ServicesSection/>
       <WhyChooseUs/>
-      <TestimonialSection/>
    </div>
   );
 }

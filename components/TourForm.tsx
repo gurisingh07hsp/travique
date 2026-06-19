@@ -136,7 +136,6 @@ export default function TourFormModal({
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
         .modal-scroll::-webkit-scrollbar { width: 4px; }
         .modal-scroll::-webkit-scrollbar-track { background: transparent; }
         .modal-scroll::-webkit-scrollbar-thumb { background: #f59e0b44; border-radius: 4px; }
@@ -182,11 +181,10 @@ export default function TourFormModal({
                     {mode === "edit" ? "Edit Tour" : "New Tour"}
                   </span>
                 </div>
-                <h2 className="text-white text-2xl font-bold leading-tight"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                <h2 className="text-white text-2xl font-bold leading-tight">
                   {mode === "edit" ? "Update Tour Package" : "Create Tour Package"}
                 </h2>
-                <p className="text-white/30 text-xs mt-1 font-light tracking-wide" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <p className="text-white/30 text-xs mt-1 font-light tracking-wide">
                   Fill in the details below to {mode === "edit" ? "update the" : "add a new"} tour
                 </p>
               </div>
@@ -221,7 +219,6 @@ export default function TourFormModal({
                 >
                   <label
                     className="flex items-center gap-1.5 text-white/50 text-[11px] tracking-[0.12em] uppercase font-semibold mb-2"
-                    style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
                     <span>{field.icon}</span>
                     {field.label}
@@ -238,7 +235,6 @@ export default function TourFormModal({
                       style={{
                         background: "rgba(255,255,255,0.04)",
                         border: errors[field.name as FieldName] ? "1px solid rgba(239,68,68,0.5)" : "1px solid rgba(255,255,255,0.08)",
-                        fontFamily: "'DM Sans', sans-serif",
                       }}
                       onFocus={(e) => { if (!errors[field.name as FieldName]) e.currentTarget.style.border = "1px solid rgba(245,158,11,0.4)"; }}
                       onBlur={(e) => { if (!errors[field.name as FieldName]) e.currentTarget.style.border = "1px solid rgba(255,255,255,0.08)"; }}
@@ -252,7 +248,6 @@ export default function TourFormModal({
                         background: "rgba(255,255,255,0.04)",
                         border: "1px solid rgba(255,255,255,0.08)",
                         color: form[field.name as FieldName] ? "white" : "rgba(255,255,255,0.2)",
-                        fontFamily: "'DM Sans', sans-serif",
                       }}
                     >
                       <option value="" style={{ background: "#1a1a2e", color: "rgba(255,255,255,0.4)" }}>
@@ -275,7 +270,6 @@ export default function TourFormModal({
                       style={{
                         background: "rgba(255,255,255,0.04)",
                         border: errors[field.name as FieldName] ? "1px solid rgba(239,68,68,0.5)" : "1px solid rgba(255,255,255,0.08)",
-                        fontFamily: "'DM Sans', sans-serif",
                       }}
                       onFocus={(e) => { if (!errors[field.name as FieldName]) e.currentTarget.style.border = "1px solid rgba(245,158,11,0.4)"; }}
                       onBlur={(e) => { if (!errors[field.name as FieldName]) e.currentTarget.style.border = "1px solid rgba(255,255,255,0.08)"; }}
@@ -305,14 +299,13 @@ export default function TourFormModal({
 
           {/* Footer */}
           <div className="shrink-0 px-8 py-5 border-t border-white/[0.07] flex items-center justify-between gap-3">
-            <p className="text-white/20 text-[11px]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <p className="text-white/20 text-[11px]">
               <span className="text-amber-400">*</span> Required fields
             </p>
             <div className="flex gap-3">
               <button
                 onClick={onClose}
                 className="px-5 py-2.5 cursor-pointer rounded-xl border border-white/10 text-white/40 hover:text-white/70 hover:border-white/20 text-sm font-medium transition-all"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 Cancel
               </button>
@@ -324,7 +317,6 @@ export default function TourFormModal({
                   background: submitted ? "rgba(245,158,11,0.15)" : "linear-gradient(135deg, #f59e0b, #d97706)",
                   color: submitted ? "rgba(245,158,11,0.7)" : "#000",
                   border: submitted ? "1px solid rgba(245,158,11,0.3)" : "none",
-                  fontFamily: "'DM Sans', sans-serif",
                   boxShadow: submitted ? "none" : "0 4px 20px rgba(245,158,11,0.3)",
                 }}
               >
