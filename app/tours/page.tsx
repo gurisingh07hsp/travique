@@ -19,8 +19,8 @@ const page = () => {
           {tours?.map((t,index) => (
             <div onClick={()=> router.push(`/${t.slug}`)} key={index} className="flex flex-col shadow cursor-pointer p-2 rounded-xl">
               {/* Image placeholder */}
-              <div className="rounded-lg aspect-4/3 mb-4 px-1 pt-1">
-                <img src={t.image} alt={t.title} className='w-full h-full object-fill shadow-lg rounded-lg' />
+              <div className="rounded-lg aspect-4/3 h-60 mb-4 px-1 pt-1">
+                <img src={t.image} alt={t.title} className='w-full h-full object-cover shadow-lg rounded-lg' />
               </div>
 
               {/* Location */}
@@ -30,7 +30,7 @@ const page = () => {
               {/* <p>{t.description}</p> */}
               {/* Price & Book */}
               <div className="flex items-center justify-between bg-main text-primary rounded-full px-5 py-2.5">
-                <a href={`/${t.slug}`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
+                <a href={index < 6 ? `/${t.slug}` : `/${t.slug}/book-now`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
                   Book Now
                   <ChevronRight size={14} />
                 </a>

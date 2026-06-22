@@ -59,4 +59,94 @@ export const PackageData = [
         buttonText: 'Book Transfer',
         slug: 'airport-transfer-package'
     },
+    {
+        title: 'Glenorchy',
+        image: '/packageImages/glenorchy.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'glenorchy'
+    },
+    {
+        title: 'Mount Cook',
+        image: '/packageImages/mountCook.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'mount-cook'
+    },
+    {
+        title: 'Ski Transfers',
+        image: '/packageImages/skiTransfers.png',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'ski-transfers'
+    },
+    {
+        title: 'Lake Tekapo',
+        image: '/packageImages/lakeTekapo.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'lake-tekapo'
+    },
+    {
+        title: 'Wanaka',
+        image: '/packageImages/wanaka.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'wanaka'
+    },
+    {
+        title: 'Franz Glacier',
+        image: '/packageImages/franzGlacier.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'franz-glacier'
+    },
+    {
+        title: 'Wine Tour',
+        image: '/packageImages/wineTour.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'wine-tour'
+    },
+    {
+        title: 'Stargazing',
+        image: '/packageImages/stargazing.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'stargazing'
+    },
+    {
+        title: 'Wedding Transfers',
+        image: '/packageImages/weddingTransfers.jpeg',
+        duration: '',
+        description: '',
+        includes: [],
+        bestFor: '',
+        buttonText: '',
+        slug: 'wedding-transfers'
+    },
 ]

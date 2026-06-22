@@ -28,7 +28,7 @@ const accordionItems = [
   {
     id: 5,
     title: 'Ski Transport',
-    imageUrl: '/hero5.jpeg',
+    imageUrl: '/packageImages/franzGlacier.jpeg',
   },
 ];
 

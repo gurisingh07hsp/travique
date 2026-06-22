@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
 
           {/* Right – Why Choose Us */}
           <div>
-            <img src="/whychooseus1.jpg" className="object-contain rounded-t-full" alt="whychooseus" />
+            <img src="/whychooseus.jpeg" className="object-contain rounded-t-full" alt="whychooseus" />
           </div>
 
           <div>
