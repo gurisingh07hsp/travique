@@ -10,7 +10,7 @@ const PopularSearchSection = () => {
       <div className="max-w-6xl mx-auto">
         <h3 className="text-2xl md:text-3xl text-center font-bold text-foreground">Popular Search</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-          {PackageData.map((p, index)=> (
+          {PackageData.slice(0,6).map((p, index)=> (
             <button onClick={()=> router.push(p.slug)} key={index} className="border border-gray-300 cursor-pointer text-center rounded-lg px-4 py-2">
               <h2>{p.title}</h2>
             </button>
