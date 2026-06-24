@@ -1,16 +1,25 @@
 'use client'
+
+import Image from "next/image"
+
 const AboutUsSection = () => {
 
   return (
       <section className="w-full py-20 bg-background">
       <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
-        <div className="rounded-3xl overflow-hidden aspect-square bg-muted">
-          <img
-            src={'/AboutUsImage1.png'}
+        <div className="relative rounded-3xl overflow-hidden aspect-square bg-muted">
+          {/* <img
+            src={'/about.jpeg'}
             alt="Travel experience"
             className="w-full h-full object-cover"
-          />
+          /> */}
+            <Image
+              src="/about.jpeg"
+              alt="Travel experience"
+              fill
+              className="object-cover"
+            />
         </div>
 
         {/* Right Content */}

@@ -4,6 +4,7 @@ import { PackageData } from '@/packagedata/packagedata';
 import { ChevronRight} from 'lucide-react'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const page = () => {
     const [tours, setTours] = useState<ToursType2[]>(PackageData);
@@ -17,10 +18,15 @@ const page = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14 mt-14">
           {tours?.map((t,index) => (
-            <div onClick={()=> router.push(`/${t.slug}`)} key={index} className="flex flex-col shadow cursor-pointer p-2 rounded-xl">
+            <div onClick={()=> router.push(index < 6 ? `/${t.slug}` : `/${t.slug}/book-now`)} key={index} className="flex flex-col shadow cursor-pointer p-2 rounded-xl">
               {/* Image placeholder */}
-              <div className="rounded-lg aspect-4/3 h-60 mb-4 px-1 pt-1">
-                <img src={t.image} alt={t.title} className='w-full h-full object-cover shadow-lg rounded-lg' />
+              <div className="relative rounded-lg aspect-4/3 h-60 mb-4 px-1 pt-1">
+                <Image
+                  src={t.image}
+                  alt={t.title}
+                  fill
+                  className="object-cover shadow-lg rounded-lg"
+                />
               </div>
 
               {/* Location */}
