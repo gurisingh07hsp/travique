@@ -81,7 +81,7 @@ export const PackageData = [
     },
     {
         title: 'Ski Transfers',
-        image: '/packageImages/skiTransfers.png',
+        image: '/packageImages/skiTransfers1.png',
         duration: '',
         description: '',
         includes: [],
