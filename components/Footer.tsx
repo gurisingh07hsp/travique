@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 export default function Footer() {
   const [email, setEmail] = useState("");
 
@@ -118,9 +119,9 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
           <p>Copyigt © 2026 MilkyWay Tours & Transfers &nbsp;|    </p>
           <div className="flex gap-4">
-            <p className="hover:text-amber-500 transition-colors">Terms of Use</p>
+            <Link href={'/terms'} className="hover:text-amber-500 transition-colors">Terms of Use</Link>
             <span>|</span>
-            <p className="hover:text-amber-500 transition-colors">Privacy Policy</p>
+            <Link href={'/privacy-policy'} className="hover:text-amber-500 transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </div>
