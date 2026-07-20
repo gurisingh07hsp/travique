@@ -121,7 +121,7 @@ const PackageDetail = () => {
         <div>
         </div>
         <button onClick={()=> router.push(`/${tour.slug}/book-now`)} className="bg-main text-white font-bold px-8 py-3 rounded-2xl transition-all text-sm">
-          Book Now
+          Send Enquiry
         </button>
       </div>
     </div>
