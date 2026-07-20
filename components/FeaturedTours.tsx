@@ -27,7 +27,7 @@ const FeaturedTours = () => {
               <h3 className="text-lg font-bold text-foreground mb-3 ms-2">{t.title}</h3>
               <div className="flex items-center justify-between bg-main text-primary mx-1 rounded-full px-5 py-2.5">
                 <a href={`/${t.slug}`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
-                  Book Now
+                  View Tour
                 </a>
               </div>
             </div>

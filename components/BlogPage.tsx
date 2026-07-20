@@ -59,10 +59,6 @@ const BlogPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Explore Our Latest Travel Articles
           </h2>
-          <p className="text-muted-foreground text-sm max-w-xl mx-auto leading-relaxed">
-            Fermentum luctus convallis non lectus. Aliquam at ut viverra noniqu arcu massa laoreet
-            commodo ac. Fermentum luctus convallis. Aliquam at ut
-          </p>
         </div>
 
         {/* Grid */}

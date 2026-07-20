@@ -37,7 +37,7 @@ const page = () => {
               {/* Price & Book */}
               <div className="flex items-center justify-between bg-main text-primary rounded-full px-5 py-2.5">
                 <a href={index < 6 ? `/${t.slug}` : `/${t.slug}/book-now`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
-                  Book Now
+                  View Tour
                   <ChevronRight size={14} />
                 </a>
               </div>
