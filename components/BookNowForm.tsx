@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import PhoneInput from "react-phone-number-input";
 import {
   User,
   MapPin,
@@ -137,27 +138,29 @@ const BookNow = () => {
                       <input id="email" type="email" placeholder="john@example.com" className="pl-10 border w-full p-2 rounded-lg" value={form.email} onChange={(e) => updateForm("email", e.target.value)} />
                     </div>
                   </div>
-                  <div className="space-y-2 flex flex-col">
+                  {/* <div className="space-y-2 flex flex-col">
                     <label htmlFor="phone">Phone Number *</label>
                     <div className="relative">
                       <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
                       <input id="phone" type="tel" placeholder="+1 234 567 890" className="pl-10 p-2 border w-full rounded-lg" value={form.phone} onChange={(e) => updateForm("phone", e.target.value)} />
                     </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div className="space-y-2 flex flex-col">
-                    <label htmlFor="nationality">Nationality</label>
-                    <div className="relative">
-                      <Globe size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
-                      <input id="nationality" className="pl-10 p-2 border w-full rounded-lg" value={form.nationality} onChange={(e) => updateForm("nationality", e.target.value)} />
-                    </div>
-                  </div>
-                  {/* <div className="space-y-2 flex flex-col">
-                    <label htmlFor="passportNo">Passport Number</label>
-                    <input className="border p-2 rounded-lg" id="passportNo" placeholder="AB1234567" value={form.passportNo} onChange={(e) => updateForm("passportNo", e.target.value)} />
                   </div> */}
+           <div className="space-y-2">
+              <label className="block text-sm font-medium">
+                Phone Number <span className="text-red-500">*</span>
+              </label>
+
+              <div className="flex items-center rounded-lg border border-input bg-background px-3 py-2 focus-within:ring-2 focus-within:ring-primary">
+                <PhoneInput
+                  international
+                  defaultCountry="NZ"
+                  value={form.phone}
+                  onChange={(value) => updateForm("phone", value ?? "")}
+                  placeholder="Enter phone number"
+                  className="w-full"
+                />
+              </div>
+            </div>
                 </div>
 
                 <div className="flex justify-end pt-4">
@@ -230,7 +233,7 @@ const BookNow = () => {
                 <div className="flex justify-between pt-4">
                   <button onClick={() => setStep(1)} className="rounded-full border cursor-pointer px-6">Back</button>
                   <button disabled={loading} onClick={() => {handleSubmit()}} className="rounded-full text-white px-4 cursor-pointer flex items-center bg-main py-2">
-                    {loading ? 'Booking...' : 'Book Now'}
+                    {loading ? 'Sending...' : 'Send Enquiry'}
                     <ChevronRight size={16} />
                   </button>
                 </div>
@@ -264,11 +267,11 @@ const BookNow = () => {
       </div>
 
       <h1 className="text-4xl text-center font-bold">
-        Booking Confirmed!
+        Enquiry Sent!
       </h1>
 
       <p className="mt-3 text-green-100 text-sm md:text-base">
-        Your package has been booked successfully.
+        Your enquiry has been sent successfully.
       </p>
     </div>
 
@@ -276,7 +279,7 @@ const BookNow = () => {
     <div className="p-8 text-center">
 
       <p className="text-gray-600 leading-relaxed">
-        Thank you for choosing us. We have received your booking
+        Thank you for choosing us. We have received your enquiry
         request and our team will contact you shortly with the
         complete details.
       </p>

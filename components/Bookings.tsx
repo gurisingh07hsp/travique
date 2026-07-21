@@ -35,6 +35,34 @@ const Bookings = () => {
     useEffect(()=>{
       fetchBookings();
     },[])
+
+    const updatePaymentStatus = async (
+  id: string,
+  payment: "pending" | "done"
+) => {
+  try {
+    const res = await fetch(`/api/bookings/${id}/payment`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ payment }),
+    });
+
+    if (!res.ok) throw new Error("Failed");
+
+    setBookings((prev) =>
+      prev.map((booking) =>
+        booking._id === id
+          ? { ...booking, payment }
+          : booking
+      )
+    );
+  } catch (error) {
+    console.error(error);
+  }
+};
+
   return (
      <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -105,11 +133,21 @@ const Bookings = () => {
                     <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.returnDate).toLocaleDateString()}</td>
                     <td className="py-3 px-2 text-muted-foreground hidden md:table-cell"> {new Date(b.createdAt).toLocaleDateString()}</td>
                     <td className="py-3 px-2 font-medium text-foreground">{b.phone}</td>
-                    <td className="py-3 px-2">
-                      <div className={`text-xs rounded-2xl w-[70%] text-center capitalize ${statusColors[b.payment]}`}>
-                        {b.payment}
-                      </div>
-                    </td>
+                 <td className="py-3 px-2">
+                    <select
+                      value={b.payment}
+                      onChange={(e) =>
+                        updatePaymentStatus(
+                          b._id,
+                          e.target.value as "pending" | "done"
+                        )
+                      }
+                      className={`rounded-full px-3 py-1 text-xs font-medium border-none outline-none cursor-pointer ${statusColors[b.payment]}`}
+                    >
+                      <option value="pending">Pending</option>
+                      <option value="done">Done</option>
+                    </select>
+                  </td>
                     <td className="py-3 px-2">
                       <div className="flex gap-1">
                         <button className="h-7 w-7">

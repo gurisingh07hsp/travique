@@ -107,8 +107,8 @@ export default function Footer() {
               placeholder="Enter your email.."
               className="w-full bg-gray-100 rounded-full px-5 py-3 text-sm text-gray-600 placeholder-gray-400 outline-none focus:ring-2 focus:ring-amber-300 transition"
             />
-            <button className="w-fit bg-main cursor-pointer hover:bg-amber-500 transition-colors text-white text-sm font-semibold px-6 py-3 rounded-full">
-              Learn More
+            <button onClick={(e)=> setEmail('')} className="w-fit bg-main cursor-pointer hover:bg-amber-500 transition-colors text-white text-sm font-semibold px-6 py-3 rounded-full">
+              Subscribe
             </button>
           </div>
         </div>

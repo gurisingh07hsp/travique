@@ -1,9 +1,45 @@
+'use client'
+import axios from 'axios';
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
-import React from 'react'
-import BookingSearchSection from './BookingSearchSection'
-import FAQSection from './FAQSection'
-
+import { useState } from 'react';
+import PhoneInput from "react-phone-number-input";
 const ContactUsPage = () => {
+  const [message, setMessage] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  })
+
+  const FormReset = async() => {
+    setForm({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: ''
+    })
+  }
+
+  const sendMessage = async() => {
+    if(!form.email || !form.phone){
+      setMessage('Fill all the required fields');
+      return ;
+    }
+    try{
+      const response = await axios.post('/api/sendmessage', form);
+      if(response.status == 200){
+        setMessage(response.data.message);
+        FormReset();
+      }
+    }catch(error){
+      console.log(error);
+    }
+  }
+
+
   return (
     <div>
       <section className="py-20 bg-background">
@@ -56,30 +92,49 @@ const ContactUsPage = () => {
             <div className="space-y-5">
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
-                <input placeholder="Full Name" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
+                <input value={form.name} onChange={(e)=> setForm({...form, name: e.target.value})} placeholder="Full Name" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-                <input type="email" placeholder="Email" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Email <span className="text-red-500">*</span></label>
+                <input value={form.email} onChange={(e=> setForm({...form, email: e.target.value}))} type="email" placeholder="Email" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
               </div>
-              <div>
+               <div className="space-y-2">
+              <label className="block text-sm font-medium">
+                Phone Number <span className="text-red-500">*</span>
+              </label>
+
+              <div className="flex items-center rounded-lg border border-input bg-background px-3 py-2 focus-within:ring-2 focus-within:ring-primary">
+                <PhoneInput
+                  international
+                  defaultCountry="NZ"
+                  value={form.phone}
+                  onChange={(value) => setForm({ ...form, phone: value || '' })}
+                  placeholder="Enter phone number"
+                  className="w-full"
+                />
+              </div>
+            </div>
+              {/* <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
                 <input type="tel" placeholder="Phone" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
-              </div>
+              </div> */}
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Service Required</label>
-                <input type="text" placeholder="Service" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
+                <input value={form.service} onChange={(e)=> setForm({...form, service: e.target.value})} type="text" placeholder="Service" className="bg-[#F3F3F3] px-4 text-sm rounded-2xl w-full border-0 h-11" />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-                <textarea placeholder="Your Message Here..." className="bg-[#F3F3F3] px-4 py-4 text-sm rounded-2xl w-full border-0 min-h-30 resize-none" />
+                <textarea value={form.message} onChange={(e)=> setForm({...form, message: e.target.value})} placeholder="Your Message Here..." className="bg-[#F3F3F3] px-4 py-4 text-sm rounded-2xl w-full border-0 min-h-30 resize-none" />
               </div>
-              <button className="flex items-center rounded-4xl p-2 bg-main">
+              <p className={message.includes('successfully') ? 'text-green-600 bg-green-100 py-1 text-center rounded-lg' : 'text-red-600 bg-red-100 py-1 text-center rounded-lg'}>
+                {message}
+              </p>
+              <button onClick={sendMessage} className="flex cursor-pointer items-center rounded-4xl p-2 bg-main">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                   <ArrowRight/>
                 </div>
                 <div className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90">
-                  Get Started
+                  Send Enquiry
                 </div>
               </button>
             </div>

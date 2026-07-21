@@ -8,6 +8,7 @@ import {
   MapPin,
   ArrowUpRight,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import {
   AreaChart,
@@ -22,49 +23,38 @@ import {
 } from "recharts";
 
 const stats = [
-  { title: "Total Revenue", value: "$124,580", change: "+12.5%", up: true, icon: DollarSign, color: "bg-yellow-500/10 txt-main" },
+  // { title: "Total Revenue", value: "$124,580", change: "+12.5%", up: true, icon: DollarSign, color: "bg-yellow-500/10 txt-main" },
   { title: "Total Bookings", value: "1,248", change: "+8.2%", up: true, icon: CalendarCheck, color: "bg-emerald-500/10 text-emerald-600" },
-  { title: "Active Customers", value: "3,462", change: "+5.1%", up: true, icon: Users, color: "bg-blue-500/10 text-blue-600" },
-  { title: "Tour Packages", value: "86", change: "-2.3%", up: false, icon: MapPin, color: "bg-purple-500/10 text-purple-600" },
+  // { title: "Active Customers", value: "3,462", change: "+5.1%", up: true, icon: Users, color: "bg-blue-500/10 text-blue-600" },
+  { title: "Tour Packages", value: "12", change: "", icon: MapPin, color: "bg-purple-500/10 text-purple-600" },
 ];
 
-const revenueData = [
-  { month: "Jan", revenue: 18500 },
-  { month: "Feb", revenue: 22300 },
-  { month: "Mar", revenue: 19800 },
-  { month: "Apr", revenue: 28400 },
-  { month: "May", revenue: 32100 },
-  { month: "Jun", revenue: 35800 },
-  { month: "Jul", revenue: 29600 },
-  { month: "Aug", revenue: 38200 },
-  { month: "Sep", revenue: 34500 },
-  { month: "Oct", revenue: 41200 },
-  { month: "Nov", revenue: 37800 },
-  { month: "Dec", revenue: 45600 },
-];
+ const [bookingsByDestination, setBookingsByDestination] = useState([]);
 
-const bookingsByDestination = [
-  { destination: "Bali", bookings: 245 },
-  { destination: "Paris", bookings: 198 },
-  { destination: "Tokyo", bookings: 176 },
-  { destination: "Maldives", bookings: 154 },
-  { destination: "Dubai", bookings: 132 },
-  { destination: "Rome", bookings: 118 },
-];
 
-const recentBookings = [
-  { id: "BK-001", customer: "Sarah Johnson", destination: "Bali, Indonesia", date: "Mar 12, 2026", amount: "$2,450", status: "confirmed" },
-  { id: "BK-002", customer: "Michael Chen", destination: "Paris, France", date: "Mar 11, 2026", amount: "$3,200", status: "pending" },
-  { id: "BK-003", customer: "Emma Wilson", destination: "Tokyo, Japan", date: "Mar 10, 2026", amount: "$4,100", status: "confirmed" },
-  { id: "BK-004", customer: "James Brown", destination: "Maldives", date: "Mar 09, 2026", amount: "$5,800", status: "cancelled" },
-  { id: "BK-005", customer: "Lisa Anderson", destination: "Dubai, UAE", date: "Mar 08, 2026", amount: "$2,900", status: "confirmed" },
-];
+// const bookingsByDestination = [
+//   { destination: "Bali", bookings: 245 },
+//   { destination: "Paris", bookings: 198 },
+//   { destination: "Tokyo", bookings: 176 },
+//   { destination: "Maldives", bookings: 154 },
+//   { destination: "Dubai", bookings: 132 },
+//   { destination: "Rome", bookings: 118 },
+// ];
 
-const statusColors: Record<string, string> = {
-  confirmed: "bg-emerald-500/10 text-emerald-600 border-emerald-200",
-  pending: "bg-amber-500/10 text-amber-600 border-amber-200",
-  cancelled: "bg-red-500/10 text-red-600 border-destructive/20",
-};
+  useEffect(() => {
+    fetchDestinations();
+  }, []);
+
+  const fetchDestinations = async () => {
+    try {
+      const res = await fetch("/api/destination-bookings");
+      const data = await res.json();
+
+      setBookingsByDestination(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 const Dashboard = () => {
   return (
       <div className="space-y-6">
@@ -98,7 +88,7 @@ const Dashboard = () => {
 
       {/* Charts */}
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 border border-gray-300 p-6 rounded-lg shadow">
+        {/* <div className="lg:col-span-2 border border-gray-300 p-6 rounded-lg shadow">
           <div className="pb-2">
             <div className="text-base font-semibold">Revenue Overview</div>
           </div>
@@ -119,7 +109,7 @@ const Dashboard = () => {
               </AreaChart>
             </ResponsiveContainer>
           </div>
-        </div>
+        </div> */}
 
         <div className="border border-gray-300 rounded-lg p-6 shadow">
           <div className="pb-2">
@@ -140,7 +130,7 @@ const Dashboard = () => {
       </div>
 
       {/* Recent Bookings */}
-      <div className="border border-gray-300 rounded-lg p-6 shadow">
+      {/* <div className="border border-gray-300 rounded-lg p-6 shadow">
         <div className="flex flex-row items-center justify-between pb-2">
           <div className="text-base font-semibold">Recent Bookings</div>
           <a href="/admin/bookings" className="text-sm txt-main hover:underline flex items-center gap-1">
@@ -179,7 +169,7 @@ const Dashboard = () => {
             </table>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

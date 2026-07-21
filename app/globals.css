@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "react-phone-number-input/style.css";
 
 :root {
   --background: #ffffff;
@@ -26,6 +27,45 @@
 
 .bg-muted {
   background-color: #f1f5f9;
+}
+
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.PhoneInputCountry {
+  margin-right: 12px;
+}
+
+.PhoneInputCountrySelect {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.PhoneInputInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #111827;
+}
+
+.PhoneInputInput::placeholder {
+  color: #9ca3af;
+}
+
+.PhoneInputCountryIcon {
+  width: 20px;
+  height: 15px;
+}
+
+.PhoneInputCountrySelectArrow {
+  color: #6b7280;
 }
 
 body {
