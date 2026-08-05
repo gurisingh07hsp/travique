@@ -29,7 +29,6 @@ const stats = [
   { title: "Tour Packages", value: "12", change: "", icon: MapPin, color: "bg-purple-500/10 text-purple-600" },
 ];
 
- const [bookingsByDestination, setBookingsByDestination] = useState([]);
 
 
 // const bookingsByDestination = [
@@ -41,7 +40,10 @@ const stats = [
 //   { destination: "Rome", bookings: 118 },
 // ];
 
-  useEffect(() => {
+
+const Dashboard = () => {
+   const [bookingsByDestination, setBookingsByDestination] = useState([]);
+     useEffect(() => {
     fetchDestinations();
   }, []);
 
@@ -55,7 +57,6 @@ const stats = [
       console.error(error);
     }
   };
-const Dashboard = () => {
   return (
       <div className="space-y-6">
       <div>
@@ -87,7 +88,7 @@ const Dashboard = () => {
       </div>
 
       {/* Charts */}
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-1">
         {/* <div className="lg:col-span-2 border border-gray-300 p-6 rounded-lg shadow">
           <div className="pb-2">
             <div className="text-base font-semibold">Revenue Overview</div>
@@ -111,7 +112,7 @@ const Dashboard = () => {
           </div>
         </div> */}
 
-        <div className="border border-gray-300 rounded-lg p-6 shadow">
+        <div className="border border-gray-300 rounded-lg p-4 shadow">
           <div className="pb-2">
             <div className="text-base font-semibold">Top Destinations</div>
           </div>
@@ -120,7 +121,7 @@ const Dashboard = () => {
               <BarChart data={bookingsByDestination} layout="vertical">
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(214.3, 31.8%, 91.4%)" />
                 <XAxis type="number" tick={{ fontSize: 11 }} stroke="hsl(215.4, 16.3%, 46.9%)" />
-                <YAxis dataKey="destination" type="category" tick={{ fontSize: 11 }} width={60} stroke="hsl(215.4, 16.3%, 46.9%)" />
+                <YAxis dataKey="destination" type="category" tick={{ fontSize: 11 }} width={100} stroke="hsl(215.4, 16.3%, 46.9%)" />
                 <Tooltip />
                 <Bar dataKey="bookings" fill="hsl(40, 96%, 56%)" radius={[0, 4, 4, 0]} />
               </BarChart>

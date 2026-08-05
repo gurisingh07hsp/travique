@@ -1,4 +1,7 @@
 import mongoose from "mongoose";
+import dns from "node:dns/promises";
+dns.setServers(["1.1.1.1"]);
+console.log(await dns.getServers());
 
 const MONGODB_URI = process.env.MONGODB_URI!;
 

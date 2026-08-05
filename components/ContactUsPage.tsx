@@ -79,7 +79,7 @@ const ContactUsPage = () => {
                     </div>
                     <div className="flex items-center mt-3 gap-2">
                       <Mail size={14} className="txt-main shrink-0" />
-                      <p className="text-sm text-muted-foreground">info@milkywaytours.com</p>
+                      <p className="text-sm text-muted-foreground">tours.milkyways@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ const ContactUsPage = () => {
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
                 <textarea value={form.message} onChange={(e)=> setForm({...form, message: e.target.value})} placeholder="Your Message Here..." className="bg-[#F3F3F3] px-4 py-4 text-sm rounded-2xl w-full border-0 min-h-30 resize-none" />
               </div>
-              <p className={message.includes('successfully') ? 'text-green-600 bg-green-100 py-1 text-center rounded-lg' : 'text-red-600 bg-red-100 py-1 text-center rounded-lg'}>
+              <p className={message.includes('successfully') ? 'text-green-600 bg-green-100 py-1 text-center rounded-lg' : `text-red-600 bg-red-100 ${message && 'py-1'} text-center rounded-lg`}>
                 {message}
               </p>
               <button onClick={sendMessage} className="flex cursor-pointer items-center rounded-4xl p-2 bg-main">
