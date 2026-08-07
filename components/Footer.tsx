@@ -13,11 +13,11 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src='/logo.png' alt="logo" className="md:w-48 w-28 rounded-lg" />
+            <img src='/logo.jpeg' alt="logo" className="md:w-48 w-28 rounded-sm" />
           </div>
 
           <p className="text-sm leading-relaxed max-w-50">
-            Milky Ways Tour is a modern travel platform offering exciting and well-planned tour experiences across top destinations.
+            MilkyWays Tour is a modern travel platform offering exciting and well-planned tour experiences across top destinations.
           </p>
 
           {/* Social icons */}
@@ -117,7 +117,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
-          <p>Copyigt © 2026 MilkyWay Tours & Transfers &nbsp;|    </p>
+          <p>Copyigt © 2026 MilkyWaysTours & Transfers &nbsp;|    </p>
           <div className="flex gap-4">
             <Link href={'/terms'} className="hover:text-amber-500 transition-colors">Terms of Use</Link>
             <span>|</span>

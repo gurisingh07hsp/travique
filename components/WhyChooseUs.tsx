@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-              Why Choose MilkyWay?
+              Why Choose MilkyWays?
             </h2>
 
             <div className="flex flex-col mt-8 gap-6">

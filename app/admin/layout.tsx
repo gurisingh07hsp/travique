@@ -1,134 +1,3 @@
-// "use client";
-
-// import { useState } from "react";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-// import {
-//   LayoutDashboard,
-//   CalendarCheck,
-//   MapPin,
-//   FileText,
-//   LogOut,
-//   Menu,
-//   X,
-//   ChevronDown,
-// } from "lucide-react";
-
-// const navItems = [
-//   { title: "Dashboard", path: "/admin", icon: LayoutDashboard },
-//   { title: "Tour Packages", path: "/admin/packages", icon: MapPin },
-//   { title: "Bookings", path: "/admin/bookings", icon: CalendarCheck },
-//   { title: "Blog Posts", path: "/admin/blog", icon: FileText },
-// ];
-
-// export default function AdminLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   const [sidebarOpen, setSidebarOpen] = useState(true);
-//   const pathname = usePathname();
-
-//   const isActive = (path: string) => {
-//     if (path === "/admin") return pathname === "/admin";
-//     return pathname.startsWith(path);
-//   };
-
-//   return (
-//     <div className="flex h-screen">
-//       {/* Sidebar */}
-//       <aside
-//         className={`${
-//           sidebarOpen ? "w-64" : "w-0 md:w-20"
-//         } fixed inset-y-0 left-0 z-50 flex flex-col bg-white border-r border-gray-300 transition-all duration-300 overflow-hidden`}
-//       >
-//         {/* Logo */}
-//         <div className="flex h-16 items-center justify-between px-3 border-b border-gray-300">
-//           {sidebarOpen && (
-//             <Link href="/admin" className="flex items-center gap-2">
-//               <img src="/logo.png" className="h-8 w-8" />
-//               <span className="font-bold text-lg">Milky Ways Tours</span>
-//             </Link>
-//           )}
-
-//           <button onClick={() => setSidebarOpen(!sidebarOpen)}>
-//             {sidebarOpen ? <X /> : <Menu />}
-//           </button>
-//         </div>
-
-//         {/* Nav */}
-//         <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1">
-//           {navItems.map((item) => (
-//             <Link
-//               key={item.path}
-//               href={item.path}
-//               className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm ${
-//                 isActive(item.path)
-//                   ? "bg-main text-white"
-//                   : "hover:bg-gray-100"
-//               }`}
-//             >
-//               <item.icon className="h-5 w-5" />
-//               {sidebarOpen && <span>{item.title}</span>}
-//             </Link>
-//           ))}
-//         </nav>
-
-//         {/* Bottom */}
-//         {sidebarOpen && (
-//           <div className="border-t border-gray-300 p-3">
-//             <Link href="/" className="flex items-center gap-2 text-sm">
-//               <LogOut className="h-5 w-5" />
-//               Back to Website
-//             </Link>
-//           </div>
-//         )}
-//       </aside>
-
-//       {/* Main */}
-//       <div
-//         className={`flex-1 flex flex-col ${
-//           sidebarOpen ? "ml-64" : "ml-0 md:ml-20"
-//         } transition-all`}
-//       >
-//         {/* Top Bar */}
-//         <header className="flex h-16 items-center border-b border-gray-300 px-6">
-//           <button
-//             className="md:hidden"
-//             onClick={() => setSidebarOpen(!sidebarOpen)}
-//           >
-//             <Menu />
-//           </button>
-
-//           <div className="ml-auto border border-gray-300 p-2 rounded-lg flex items-center gap-4">
-
-//             <div className="flex items-center gap-2">
-//               <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">
-//                 AD
-//               </div>
-
-//               <div className="hidden sm:block">
-//                 <p className="text-sm font-medium">Admin</p>
-//                 <p className="text-xs text-gray-500">
-//                   admin@milkyways.com
-//                 </p>
-//               </div>
-
-//               <ChevronDown />
-//             </div>
-//           </div>
-//         </header>
-
-//         {/* Page Content */}
-//         <main className="flex-1 overflow-y-auto p-6 bg-[#fafcfd]">
-//           {children}
-//         </main>
-//       </div>
-//     </div>
-//   );
-// }
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -150,7 +19,6 @@ import axios from "axios";
 
 const navItems = [
   { title: "Dashboard", path: "/admin", icon: LayoutDashboard },
-  // { title: "Tour Packages", path: "/admin/packages", icon: MapPin },
   { title: "Bookings", path: "/admin/bookings", icon: CalendarCheck },
   { title: "Blog Posts", path: "/admin/blog", icon: FileText },
 ];
@@ -299,7 +167,7 @@ export default function AdminLayout({
           >
             {showLabels && (
             <img
-              src="/logo.png"
+              src="/logo.jpeg"
               style={{ height: 40, width: 130, flexShrink: 0}}
               alt="logo"
             />

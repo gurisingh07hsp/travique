@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Milky Way Tours",
+  title: "Privacy Policy | MilkyWaysTours",
   description:
-    "Read the Privacy Policy of Milky Way Tours to understand how we collect, use, and protect your personal information.",
+    "Read the Privacy Policy of MilkyWaysTours to understand how we collect, use, and protect your personal information.",
 };
 
 const sections = [
@@ -135,7 +135,7 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <p className="mt-6 leading-8 text-gray-700">
-            At <span className="font-semibold text-blue-600">Milky Way Tours</span>,
+            At <span className="font-semibold text-blue-600">MilkyWaysTours</span>,
             we value your privacy and are committed to protecting your personal
             information. This Privacy Policy explains how we collect, use,
             store, and protect your information when you use our website or

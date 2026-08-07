@@ -13,10 +13,18 @@ const Navbar = () => {
     const router = useRouter();
   return (
      <nav className="w-full max-w-7xl mx-auto bg-background">
+          <div className="md:hidden">
+            <div className='mx-auto py-1 bg-main text-white text-center'>
+              <p>24X7 Taxi service in Queenstown</p>
+              <button onClick={() => window.location.href = 'tel:+642108111920'} className="flex font-medium mx-auto items-center gap-1 cursor-pointer text-muted-foreground">
+                <Phone size={15}/>  +64 2108111920
+              </button>
+            </div>
+          </div>
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         {/* Logo */}
         <button onClick={()=> router.push('/')} className="flex items-center gap-2">
-          <img src='/logo.png' alt="logo" className="md:w-48 w-28 rounded-lg" />
+          <img src='/logo.jpeg' alt="logo" className="md:w-48 w-28 rounded-sm" />
         </button>
 
 
@@ -233,9 +241,9 @@ const Navbar = () => {
             </button>
             </>
           ) : (
-          <div className="flex flex-col text-sm items-start">
+          <div className="flex flex-col items-start">
             Contact for Airport transfers:
-            <button onClick={() => window.location.href = 'tel:+642108111920'} className="text-sm flex items-center cursor-pointer text-muted-foreground">
+            <button onClick={() => window.location.href = 'tel:+642108111920'} className="flex items-center cursor-pointer text-muted-foreground">
              <Phone size={14}/> +64 2108111920
             </button>
           </div>

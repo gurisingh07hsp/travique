@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Milky Way Tours",
+  title: "Milky Ways Tours",
   description: "Reliable Airport Transfers & Private Tours Across New Zealand",
 };
 

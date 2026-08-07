@@ -98,7 +98,7 @@ export function LandingAccordionItem() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           {/* Left Side: Text Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <p className="text-gray-600 text-sm md:text-base mb-2">All you need is MilkyWayTours</p>
+            <p className="text-gray-600 text-sm md:text-base mb-2">All you need is MilkyWaysTours</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tighter">
               Reliable Airport Transfers & Private Tours Across New Zealand
             </h1>

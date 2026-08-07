@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Milky Way Tours",
+  title: "Terms & Conditions | MilkyWaysTours",
   description:
-    "Read the Terms & Conditions for using Milky Way Tours and booking our travel services.",
+    "Read the Terms & Conditions for using MilkyWaysTours and booking our travel services.",
 };
 
 const Terms = () => {
@@ -14,7 +14,7 @@ const Terms = () => {
         content: (
         <>
             <p>
-            By accessing or using the Milky Way Tours website and booking any of
+            By accessing or using the MilkyWaysTours website and booking any of
             our travel services, you agree to be bound by these Terms &
             Conditions. If you do not agree with any part of these terms, please
             discontinue using our website and services.
@@ -143,7 +143,7 @@ const Terms = () => {
         content: (
         <>
             <p>
-            Milky Way Tours shall not be held responsible for delays,
+            MilkyWaysTours shall not be held responsible for delays,
             cancellations, or failures caused by events beyond our reasonable
             control, including but not limited to:
             </p>
@@ -217,7 +217,7 @@ const Terms = () => {
         content: (
         <>
             <p>
-            Milky Way Tours may update these Terms & Conditions at any time to
+            MilkyWaysTours may update these Terms & Conditions at any time to
             reflect changes in our services, legal requirements, or operational
             practices. Updated terms will become effective immediately upon being
             published on this page. Continued use of our website constitutes your
@@ -242,7 +242,7 @@ const Terms = () => {
           <p className="mt-6 text-gray-700 leading-8">
             Welcome to{" "}
             <span className="font-semibold text-blue-600">
-              Milky Way Tours
+              MilkyWaysTours
             </span>
             . These Terms & Conditions govern your use of our website and the
             travel services offered through it. By accessing our website or

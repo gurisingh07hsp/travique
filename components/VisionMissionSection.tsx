@@ -16,7 +16,7 @@ const VisionMissionSection = () => {
               Vision
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-6">
-              MilkyWay Tours
+              MilkyWaysTours
               <br />
               Visionary Pathway
             </h2>
