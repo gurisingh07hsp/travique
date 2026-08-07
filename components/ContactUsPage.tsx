@@ -75,11 +75,13 @@ const ContactUsPage = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Phone size={14} className="txt-main shrink-0" />
-                      <p className="text-sm text-muted-foreground">+64 2108111920</p>
+                      <button onClick={()=> window.location.href = 'tel:+642108111920'} className="text-sm cursor-pointer text-muted-foreground">+64 2108111920</button>
                     </div>
                     <div className="flex items-center mt-3 gap-2">
                       <Mail size={14} className="txt-main shrink-0" />
-                      <p className="text-sm text-muted-foreground">tours.milkyways@gmail.com</p>
+                      <button onClick={() => window.location.href = 'mailto:tours.milkyways@gmail.com'} className="text-sm cursor-pointer text-muted-foreground">
+                        tours.milkyways@gmail.com
+                      </button>
                     </div>
                   </div>
                 </div>

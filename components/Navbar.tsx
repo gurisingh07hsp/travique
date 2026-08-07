@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import AuthModal from "./authModal";
 import { useUser } from "@/context/UserContext";
@@ -130,17 +130,17 @@ const Navbar = () => {
         <div className="hidden md:block">
           {user ? (
             <>
-            <Link href={'/tours'} className="rounded-full cursor-pointer px-4 py-2 bg-main text-white hover:opacity-90 transition-opacity">
-              Book Now
-            </Link>
             <button onClick={logout} className="rounded-full cursor-pointer ms-2 px-4 py-2 bg-red-600 text-white hover:opacity-90 transition-opacity">
               Logout
             </button>
             </>
           ) : (
-          <button onClick={()=> setIsOpen(true)} className="rounded-full cursor-pointer ms-2 px-4 py-2 bg-main text-white hover:opacity-90 transition-opacity">
-            Login
-          </button>
+          <div className="flex flex-col text-sm justify-start">
+            Contact for Airport transfers:
+            <button onClick={() => window.location.href = 'tel:+642108111920'} className="text-sm flex items-center gap-1 cursor-pointer text-muted-foreground">
+            <Phone size={15}/>  +64 2108111920
+            </button>
+          </div>
           )}
         </div>
 
@@ -228,24 +228,20 @@ const Navbar = () => {
 
           {user ? (
             <>
-            <Link href={'/tours'} className="w-full px-4 py-2 rounded-full bg-main text-white">
-              Book Now
-            </Link>
-            <br />
             <button onClick={logout} className="mt-4 px-4 py-2 rounded-full bg-red-600 text-white">
               Logout
             </button>
             </>
           ) : (
-          <button onClick={()=> setIsOpen(true)} className="w-full px-4 py-2 rounded-full bg-main text-white">
-            Login
-          </button>
+          <div className="flex flex-col text-sm items-start">
+            Contact for Airport transfers:
+            <button onClick={() => window.location.href = 'tel:+642108111920'} className="text-sm flex items-center cursor-pointer text-muted-foreground">
+             <Phone size={14}/> +64 2108111920
+            </button>
+          </div>
           )}
 
         </div>
-      )}
-      {isOpen && (
-        <AuthModal isOpen={isOpen} setIsOpen={setIsOpen} />
       )}
     </nav>
   )

@@ -1,15 +1,16 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import { X } from "lucide-react";
 import { useUser } from "@/context/UserContext";
+import {useRouter} from "next/navigation";
 
-export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (open: boolean) => void }) {
+export default function AuthModal() {
   const {setUser} = useUser();
   const [isLogin, setIsLogin] = useState(true);
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async () => {
     setError("");
@@ -24,13 +25,12 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
         setIsLogin(true);
         setForm({ name: "", email: "", password: "" });
         setError("");
-        setIsOpen(false);
+        router.push('/');
       } else {
         alert("Signup successful");
         setIsLogin(true);
         setForm({ name: "", email: "", password: "" });
         setError("");
-        setIsOpen(false);
       }
       }
 
@@ -66,9 +66,6 @@ export default function AuthModal({ isOpen, setIsOpen }: { isOpen: boolean; setI
             </svg>
           </div>
 
-          <button className="cursor-pointer" onClick={()=> setIsOpen(false)}>
-            <X/>
-          </button>
           </div>
 
           {/* Tab Switcher */}
