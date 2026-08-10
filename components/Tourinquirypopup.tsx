@@ -166,28 +166,19 @@ export default function TourInquiryPopup() {
             </svg>
 
             <div>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FF6B4A]/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#FFB199] sm:text-[11px]">
-                Boarding Pass
-              </span>
 
               <h2
                 id="tour-popup-title"
                 className="mt-4 text-[24px] leading-[1.15] text-white sm:mt-5 sm:text-[28px] md:text-[32px]"
               >
-                Where to,
+                Private Tours & Transfers
                 <br />
-                traveler?
+                Across New Zealand
               </h2>
-              <p className="mt-2.5 max-w-[30ch] text-[13.5px] leading-relaxed text-[#CFE3EA] sm:mt-3 sm:max-w-[26ch] sm:text-[14px]">
+              <p className="mt-6 max-w-[30ch] text-[13.5px] leading-relaxed text-[#CFE3EA] sm:mt-3 sm:max-w-[26ch] sm:text-[14px]">
                 Tell us your dream trip. Our travel desk will call you back
                 with a custom itinerary — no obligation.
               </p>
-            </div>
-
-            <div className="mt-6 flex gap-4 border-t border-dashed border-[#F4E9D8]/30 pt-4 sm:mt-8 sm:block sm:space-y-3 sm:pt-5">
-              <Row label="From" value="Your City" />
-              <Row label="To" value="Anywhere" />
-              <Row label="Gate" value="Open Now" accent />
             </div>
           </div>
 
@@ -301,7 +292,7 @@ export default function TourInquiryPopup() {
                     "Sending..."
                   ) : (
                     <>
-                      Send Enquiry
+                      Get my free quote
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                         <path
                           d="M4 12h16m0 0l-6-6m6 6l-6 6"

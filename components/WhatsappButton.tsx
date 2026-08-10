@@ -9,7 +9,7 @@ interface WhatsappButtonProps {
 
 export default function WhatsappButton({
   phoneNumber,
-  message = "Hello, I'm interested in your property.",
+  message = "Hi! I'm interested in your tours and would love some help planning a trip. Could you tell me more?",
 }: WhatsappButtonProps) {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
