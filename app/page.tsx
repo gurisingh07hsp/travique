@@ -1,4 +1,5 @@
 import AboutUsSection from "@/components/AboutUsSection";
+import FeaturedFleet from "@/components/FeaturedFleet";
 import FeaturedTours from "@/components/FeaturedTours";
 import HeroSection from "@/components/HeroSection";
 import PopularSearchSection from "@/components/PopularSearchSection";
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection/>
       <PopularSearchSection/>
       <FeaturedTours/>
+      <FeaturedFleet/>
       <AboutUsSection/>
       <ServicesSection/>
       <WhyChooseUs/>
