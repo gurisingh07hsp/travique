@@ -68,6 +68,11 @@ const Navbar = () => {
                         Remarkables Ski Transfer Package
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/our-fleet" className="block px-4 py-2 hover:bg-gray-100">
+                        Our Fleet
+                      </Link>
+                    </li>
                   </ul>
                 </div>
           </li>
@@ -189,6 +194,11 @@ const Navbar = () => {
               <li>
                 <Link onClick={()=>setMobileOpen(false)} href="/remarkables-ski-transfer-package" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Remarkables Ski Transfer Package
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/our-fleet" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Our Fleet
                 </Link>
               </li>
               <li>

@@ -1,32 +1,32 @@
 'use client'
 import { useRouter } from 'next/navigation'
-import { PackageData } from '@/packagedata/packagedata'
+import {cars} from '@/ourfleets/ourfleetsdata'
 import Image from 'next/image'
 
 const FeaturedFleet = () => {
-    const router = useRouter();
+  const router = useRouter();
   return (
     <div className="max-w-7xl mx-auto my-20 md:my-28 px-8">
         <h2 className="text-3xl md:text-4xl font-extrabold text-foreground text-center mb-14">
           Our Fleet
         </h2>
-        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Popular Experiences</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Our Collection</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-14">
-          {[1,3,2,5].map((car,index) => (
-            <div onClick={()=> router.push(`/car${car}/book-now`)} key={index} className="flex flex-col shadow cursor-pointer p-2 rounded-xl">
+          {cars?.map((car,index) => (
+            <div onClick={()=> router.push(`/${car.name}/book-now`)} key={index} className="flex flex-col shadow cursor-pointer p-2 rounded-xl">
               <div className="relative rounded-2xl aspect-4/3 mb-4 px-1 pt-1">
                 <Image
-                  src={`/ourFleet/car${car}.jpeg`}
-                  alt={`car${car}`}
+                  src={car.img}
+                  alt={car.name}
                   fill
                   className="w-full h-full object-fill shadow-lg rounded-lg"
                 />
               </div>
 
            
-              {/* <h3 className="text-lg font-bold text-foreground mb-3 ms-2">{t.title}</h3> */}
+              <h3 className="text-lg font-bold text-foreground mb-3 ms-2">{car.name}</h3>
               <div className="flex items-center justify-between bg-main text-primary mx-1 rounded-full px-5 py-2.5">
-                <a href={`/car${car}/book-now`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
+                <a href={`/${car.name}/book-now`} className="flex items-center gap-1 text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity">
                   Book Now
                 </a>
               </div>
