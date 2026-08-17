@@ -14,6 +14,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "MilkyWays Tours & Transfers",
   description: "Reliable Airport Transfers & Private Tours Across New Zealand",
+  verification: {
+    google: "9HjpmPuR_V03eC6Yba6LuKxcEoMsMgUyslY4osMlqlk",
+  },
 };
 
 export default function RootLayout({
