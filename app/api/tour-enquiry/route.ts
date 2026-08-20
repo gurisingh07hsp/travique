@@ -155,7 +155,7 @@ export async function POST(req: NextRequest) {
                           <td style="padding:14px 18px;border-bottom:1px solid #f1f5f9;">
                             <p style="margin:0;font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;">Email</p>
                             <p style="margin:2px 0 0 0;font-size:15px;font-weight:600;">
-                              <a href="mailto:info@zoolik.com" style="color:#0891b2;text-decoration:none;">${email}</a>
+                              <a href="mailto:${email}" style="color:#0891b2;text-decoration:none;">${email}</a>
                             </p>
                           </td>
                         </tr>
@@ -163,7 +163,7 @@ export async function POST(req: NextRequest) {
                           <td style="padding:14px 18px;">
                             <p style="margin:0;font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;">Phone</p>
                             <p style="margin:2px 0 0 0;font-size:15px;font-weight:600;">
-                              <a href="tel:+917589086920" style="color:#0891b2;text-decoration:none;">${phone}</a>
+                              <a href="tel:${phone}" style="color:#0891b2;text-decoration:none;">${phone}</a>
                             </p>
                           </td>
                         </tr>
