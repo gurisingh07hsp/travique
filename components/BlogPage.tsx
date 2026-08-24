@@ -56,9 +56,9 @@ const BlogPage = () => {
           <p className="txt-main font-semibold text-sm tracking-widest uppercase mb-3">
             Blog and Articles
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Explore Our Latest Travel Articles
-          </h2>
+          </h1>
         </div>
 
         {/* Grid */}

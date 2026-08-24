@@ -27,11 +27,11 @@ const AboutUsSection = () => {
           <span className="txt-main font-semibold text-sm tracking-wide uppercase mb-4 block">
             About Us
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight mb-6">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight mb-6">
             About MilkyWays
             <br />
             Tours & Transfers
-          </h2>
+          </h1>
           <p className="text-muted-foreground leading-relaxed max-w-md">
             MilkyWaysTours & Transfers is a trusted travel service provider in New Zealand, 
             focused on delivering smooth, comfortable, and reliable journeys.

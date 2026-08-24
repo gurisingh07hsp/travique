@@ -50,11 +50,11 @@ const ContactUsPage = () => {
             <p className="text-xs uppercase tracking-[0.2em] txt-main font-semibold mb-4">
               CONTACT US
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-5 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-5 leading-tight">
               Speak With Our
               <br />
               Travel Specialists
-            </h2>
+            </h1>
             <p className="text-muted-foreground leading-relaxed mb-10 max-w-sm">
               Have a question or need assistance with your booking? Our team is here to help.
             </p>

@@ -170,21 +170,6 @@ export async function POST(req: Request) {
   </table>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       `,
     };
 

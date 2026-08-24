@@ -9,9 +9,9 @@ import FAQSection from './FAQSection'
 const ServicesPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-8">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-foreground text-center mb-14">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-foreground text-center mb-14">
           Our Services
-        </h2>
+        </h1>
         <div>
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Airport Transfers</h3>
           <p>Timely and stress-free transfers to and from the airport.</p>

@@ -12,7 +12,7 @@ const page = () => {
   return (
     <div className='max-w-6xl lg:mx-auto mx-4'>
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Explore Our Tours</h3>
+          <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Explore Our Tours</h1>
           <p>Carefully designed tours to help you experience New Zealand comfortably, without the stress of planning.</p>
         </div>
 
