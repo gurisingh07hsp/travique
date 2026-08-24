@@ -107,7 +107,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'starlightcarrentals11@gmail.com',
+      to: 'tours.milkyways@gmail.com',
       subject: "Booking Request Received",
       html: `
       <!DOCTYPE html>
