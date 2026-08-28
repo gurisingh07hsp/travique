@@ -1,6 +1,6 @@
 export const cars = [
     {
-        name: 'Mercedes Sprinter 17 Seater',
+        name: 'Mercedes Sprinter 18 Seater',
         img: '/ourFleet/car1.jpeg'
     },
     {
@@ -8,7 +8,7 @@ export const cars = [
         img: '/ourFleet/car3.jpeg'
     },
     {
-        name: 'Mercedes Sprinter 17 Seater',
+        name: 'Mercedes Sprinter 18 Seater',
         img: '/ourFleet/car2.jpeg'
     },
     {
