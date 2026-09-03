@@ -19,7 +19,7 @@ const FeaturedFleet = () => {
                   src={car.img}
                   alt={car.name}
                   fill
-                  className="w-full h-full object-fill shadow-lg rounded-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
 
