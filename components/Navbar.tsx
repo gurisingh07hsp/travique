@@ -60,7 +60,7 @@ const Navbar = () => {
                   <ul className="py-2">
                     <li>
                       <Link href="/airport-transfer-package" className="block px-4 py-2 hover:bg-gray-100">
-                        Airport Transfer Package
+                        Airport Transfer Service
                       </Link>
                     </li>
                     <li>
@@ -188,7 +188,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link onClick={()=>setMobileOpen(false)} href="/airport-transfer-package" className="text-sm font-medium text-muted-foreground hover:text-foreground">
-                  Airport Transfer Package
+                  Airport Transfer Service
                 </Link>
               </li>
               <li>
