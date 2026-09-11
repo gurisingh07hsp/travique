@@ -637,7 +637,7 @@ const AirportTransferServicePage = () => {
           </section>
         </div>
 
-        <aside className="min-w-0">
+        <aside className="hidden lg:block min-w-0">
           <div className="lg:sticky lg:top-24 bg-[#1c1c1c] rounded-3xl p-5 sm:p-6 text-white">
             <p className="text-center bg-[#2e2e2e] rounded-full py-2.5 font-semibold mb-5">
               Book this transfer
