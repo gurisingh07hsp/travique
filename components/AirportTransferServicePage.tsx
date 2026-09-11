@@ -107,7 +107,7 @@ const fleetPhotos = [
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4 mt-12">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4 mt-10 md:mt-12 break-words">
       {children}
     </h2>
   )
@@ -136,10 +136,10 @@ function BookButton({
   return (
     <Link
       href={BOOK_HREF}
-      className={`inline-flex items-center justify-center gap-2 bg-main text-white rounded-full px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-orange-400/25 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 bg-main text-white rounded-full px-5 sm:px-7 py-3 text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-orange-400/25 w-full sm:w-auto ${className}`}
     >
       {children}
-      <ArrowRight size={16} />
+      <ArrowRight size={16} className="shrink-0" />
     </Link>
   )
 }
@@ -148,9 +148,9 @@ function CallButton({ className = '' }: { className?: string }) {
   return (
     <a
       href={PHONE_HREF}
-      className={`inline-flex items-center justify-center gap-2 border-2 border-white/70 text-white rounded-full px-6 py-3.5 text-sm font-semibold hover:bg-white/10 transition-colors ${className}`}
+      className={`inline-flex items-center justify-center gap-2 border-2 border-white/70 text-white rounded-full px-5 sm:px-6 py-3 text-sm font-semibold hover:bg-white/10 transition-colors w-full sm:w-auto ${className}`}
     >
-      <Phone size={16} />
+      <Phone size={16} className="shrink-0" />
       +64 210 811 1920
     </a>
   )
@@ -160,28 +160,28 @@ const AirportTransferServicePage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   return (
-    <div className="pb-24">
+    <div className="pb-24 overflow-x-hidden">
       <section className="relative">
-        <div className="relative h-[420px] md:h-[520px] overflow-hidden">
+        <div className="relative min-h-[520px] md:h-[520px] overflow-hidden">
           <img
             src="/packageImages/AirportTransferService.jpg"
             alt="Airport transfer service in Queenstown"
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-black/20" />
-          <div className="absolute inset-0 max-w-7xl mx-auto px-4 md:px-6 flex items-center">
-            <div className="max-w-2xl text-white">
-              <p className="text-xs uppercase tracking-[0.22em] font-semibold mb-3 text-orange-300">
+          <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/50 to-black/25" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-16 flex items-center min-h-[520px]">
+            <div className="max-w-2xl text-white w-full">
+              <p className="text-[11px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.22em] font-semibold mb-3 text-orange-300">
                 Queenstown Airport Transfers
               </p>
-              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+              <h1 className="text-[28px] leading-8 sm:text-4xl md:text-5xl font-extrabold sm:leading-tight mb-3 md:mb-4">
                 Airport Transfer Service in Queenstown
               </h1>
-              <p className="text-white/90 text-base md:text-lg leading-relaxed mb-7 max-w-xl">
+              <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-w-xl">
                 Reliable pickup and drop-off at Queenstown Airport. Comfortable vehicles, professional
                 drivers, and transfers arranged before you land.
               </p>
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 max-w-md sm:max-w-none">
                 <BookButton />
                 <CallButton />
               </div>
@@ -190,8 +190,8 @@ const AirportTransferServicePage = () => {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 -mt-10 relative z-10 mb-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 mt-4 md:-mt-10 relative z-10 mb-8 md:mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           {[
             { icon: Plane, label: 'Airport pickup & drop-off' },
             { icon: Clock, label: 'Pre-arranged, on time' },
@@ -200,20 +200,22 @@ const AirportTransferServicePage = () => {
           ].map((item) => (
             <div
               key={item.label}
-              className="bg-white rounded-2xl shadow-md p-4 md:p-5 flex items-center gap-3"
+              className="bg-white rounded-2xl shadow-md p-3.5 md:p-5 flex items-center gap-3 min-w-0"
             >
-              <div className="w-10 h-10 rounded-full bg-[#ff762154] flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#ff762154] flex items-center justify-center shrink-0">
                 <item.icon size={18} className="txt-main" />
               </div>
-              <p className="text-sm font-semibold text-[#1a1a1a] leading-snug">{item.label}</p>
+              <p className="text-[13px] md:text-sm font-semibold text-[#1a1a1a] leading-snug">
+                {item.label}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 lg:gap-10">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-5">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-8 lg:gap-10">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-5 break-words">
             Reliable Airport Transfers in Queenstown, New Zealand
           </h2>
           <div className="space-y-4 text-gray-600 leading-relaxed">
@@ -635,8 +637,8 @@ const AirportTransferServicePage = () => {
           </section>
         </div>
 
-        <aside className="lg:pt-0">
-          <div className="lg:sticky lg:top-24 bg-[#1c1c1c] rounded-3xl p-6 text-white">
+        <aside className="min-w-0">
+          <div className="lg:sticky lg:top-24 bg-[#1c1c1c] rounded-3xl p-5 sm:p-6 text-white">
             <p className="text-center bg-[#2e2e2e] rounded-full py-2.5 font-semibold mb-5">
               Book this transfer
             </p>
@@ -676,26 +678,26 @@ const AirportTransferServicePage = () => {
         </aside>
       </div>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 mt-16">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 mt-12 md:mt-16 mb-4">
         <div className="relative rounded-3xl overflow-hidden">
           <img
             src="/packageImages/QueenstownPack.jpg"
             alt="Book a Queenstown airport transfer"
-            className="w-full h-72 md:h-80 object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <p className="text-xs uppercase tracking-[0.22em] text-orange-300 font-semibold mb-3">
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-10 sm:px-8 sm:py-14 md:py-16">
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-orange-300 font-semibold mb-3">
               Ready to Travel?
             </p>
-            <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 max-w-2xl">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-3 max-w-2xl leading-snug">
               Book a Reliable Airport Transfer in Queenstown
             </h2>
-            <p className="text-white/85 max-w-xl mb-7 leading-relaxed">
+            <p className="text-white/85 max-w-xl mb-6 sm:mb-7 leading-relaxed text-sm sm:text-base">
               Start or finish your journey with comfortable, dependable transport. Travel comfortably.
               Travel confidently. Travel with MilkyWays.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 w-full max-w-md sm:max-w-none">
               <BookButton />
               <CallButton />
             </div>
