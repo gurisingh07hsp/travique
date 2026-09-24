@@ -160,7 +160,7 @@ const AirportTransferServicePage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   return (
-    <div className="pb-24 overflow-x-hidden">
+    <div className="pb-24">
       <section className="relative">
         <div className="relative min-h-[520px] md:h-[520px] overflow-hidden">
           <img
@@ -635,10 +635,37 @@ const AirportTransferServicePage = () => {
               ))}
             </div>
           </section>
+
+          <section className="mt-12 md:mt-16 mb-4">
+            <div className="relative rounded-3xl overflow-hidden">
+              <img
+                src="/packageImages/QueenstownPack.jpg"
+                alt="Book a Queenstown airport transfer"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60" />
+              <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-10 sm:px-8 sm:py-14 md:py-16">
+                <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-orange-300 font-semibold mb-3">
+                  Ready to Travel?
+                </p>
+                <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-3 max-w-2xl leading-snug">
+                  Book a Reliable Airport Transfer in Queenstown
+                </h2>
+                <p className="text-white/85 max-w-xl mb-6 sm:mb-7 leading-relaxed text-sm sm:text-base">
+                  Start or finish your journey with comfortable, dependable transport. Travel comfortably.
+                  Travel confidently. Travel with MilkyWays.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-3 w-full max-w-md sm:max-w-none">
+                  <BookButton />
+                  <CallButton />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <aside className="hidden lg:block min-w-0">
-          <div className="lg:sticky lg:top-24 bg-[#1c1c1c] rounded-3xl p-5 sm:p-6 text-white">
+          <div className="sticky top-24 z-20 bg-[#1c1c1c] rounded-3xl p-5 sm:p-6 text-white">
             <p className="text-center bg-[#2e2e2e] rounded-full py-2.5 font-semibold mb-5">
               Book this transfer
             </p>
@@ -677,33 +704,6 @@ const AirportTransferServicePage = () => {
           </div>
         </aside>
       </div>
-
-      <section className="max-w-7xl mx-auto px-4 md:px-6 mt-12 md:mt-16 mb-4">
-        <div className="relative rounded-3xl overflow-hidden">
-          <img
-            src="/packageImages/QueenstownPack.jpg"
-            alt="Book a Queenstown airport transfer"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-10 sm:px-8 sm:py-14 md:py-16">
-            <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-orange-300 font-semibold mb-3">
-              Ready to Travel?
-            </p>
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-3 max-w-2xl leading-snug">
-              Book a Reliable Airport Transfer in Queenstown
-            </h2>
-            <p className="text-white/85 max-w-xl mb-6 sm:mb-7 leading-relaxed text-sm sm:text-base">
-              Start or finish your journey with comfortable, dependable transport. Travel comfortably.
-              Travel confidently. Travel with MilkyWays.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 w-full max-w-md sm:max-w-none">
-              <BookButton />
-              <CallButton />
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

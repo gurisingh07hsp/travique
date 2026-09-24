@@ -68,6 +68,16 @@
   color: #6b7280;
 }
 
+.google-reviews-embed {
+  max-width: 100%;
+}
+
+.google-reviews-embed iframe,
+.google-reviews-embed [class*="elfsight"],
+.google-reviews-embed [class*="eapps"] {
+  max-width: 100%;
+}
+
 body {
   font-family: var(--font-inter), sans-serif;
   font-size: 17px;
