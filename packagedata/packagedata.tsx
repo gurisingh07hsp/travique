@@ -30,6 +30,26 @@ export const PackageData = [
         slug: 'christchurch-city-tour'
     },
     {
+        title: 'Akaroa Day Tour from Christchurch',
+        image: '/packageImages/ChristchurchDiscoveryTour.jpg',
+        duration: 'Full Day',
+        description: 'Explore Akaroa from Christchurch with a private day tour across Banks Peninsula. Enjoy scenic views, Akaroa Harbour, local charm and flexible travel.',
+        includes: ['Private transportation','Professional and friendly driver','Christchurch pickup arrangement','Scenic journey towards Akaroa','Flexible itinerary planning'],
+        bestFor: 'Couples, families, small groups and international visitors',
+        buttonText: 'Send Enquiry',
+        slug: 'akaroa-day-tour-from-christchurch'
+    },
+    {
+        title: 'Castle Hill Day Tour from Christchurch',
+        image: '/packageImages/mountCook.jpeg',
+        duration: 'Full Day',
+        description: 'Explore Kura Tāwhiti on a Castle Hill day tour from Christchurch. Enjoy limestone landscapes, scenic walks and private, comfortable transport with MilkyWays.',
+        includes: ['Private transportation','Professional driver','Christchurch pickup','Scenic SH73 journey','Flexible itinerary'],
+        bestFor: 'Couples, families, photographers and outdoor groups',
+        buttonText: 'Send Enquiry',
+        slug: 'castle-hill-day-tour-christchurch'
+    },
+    {
         title: 'Ski Field Transport',
         image: '/packageImages/SkiFieldTransport.png',
         duration: 'Daily Transfers',
