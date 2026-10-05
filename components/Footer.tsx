@@ -33,7 +33,10 @@ export default function Footer() {
             </a>
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/milkywaystoursnz"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="MilkyWays Tours on Instagram"
               className="w-9 h-9 rounded-full bg-main flex items-center justify-center hover:bg-amber-500 transition-colors"
             >
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">

@@ -8,41 +8,30 @@ const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gl/LwtL3LZqvP5jwzWB6'
 
 const sliderImages = [
   {
-    src: '/ourFleet/van-interior.jpg',
-    alt: 'Comfortable coach interior on a Queenstown transfer',
-    caption: 'Spacious, well-kept interiors',
-  },
-  {
     src: '/ourFleet/mercedes-sprinter-7-seater.png',
     alt: 'Mercedes Sprinter 7 Seater',
-    caption: 'Mercedes Sprinter 7 Seater',
   },
   {
     src: '/ourFleet/car3.jpeg',
     alt: 'Mercedes Sprinter 12 Seater',
-    caption: 'Mercedes Sprinter 12 Seater',
   },
   {
     src: '/ourFleet/car2.jpeg',
     alt: 'Mercedes Sprinter 18 Seater',
-    caption: 'Mercedes Sprinter 18 Seater',
   },
   {
     src: '/ourFleet/car8.jpeg',
     alt: 'Ssangyong Coach 37 Seater',
-    caption: 'Coach travel for larger groups',
   },
   {
     src: '/packageImages/AirportTransferService.jpg',
     alt: 'Airport transfer in Queenstown',
-    caption: 'Meet you at Queenstown Airport',
   },
 ]
 
 const GoogleReviewsSection = () => {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
-  const slide = sliderImages[index]
 
   const prev = () =>
     setIndex((i) => (i - 1 + sliderImages.length) % sliderImages.length)
@@ -99,7 +88,7 @@ const GoogleReviewsSection = () => {
         </div>
 
         <div
-          className="relative min-h-[380px] lg:min-h-full bg-black"
+          className="relative min-h-[380px] lg:min-h-full bg-black overflow-hidden"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -113,16 +102,6 @@ const GoogleReviewsSection = () => {
               }`}
             />
           ))}
-          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
-
-          <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
-            <p className="text-white font-semibold text-lg drop-shadow-md">
-              {slide.caption}
-            </p>
-            <p className="text-white/70 text-sm tabular-nums">
-              {String(index + 1).padStart(2, '0')} / {String(sliderImages.length).padStart(2, '0')}
-            </p>
-          </div>
 
           <button
             type="button"
@@ -146,7 +125,7 @@ const GoogleReviewsSection = () => {
               <button
                 key={img.src}
                 type="button"
-                aria-label={`Show ${img.caption}`}
+                aria-label={`Show ${img.alt}`}
                 onClick={() => setIndex(i)}
                 className={`h-1.5 rounded-full transition-all ${
                   i === index ? 'w-8 bg-[#FF7528]' : 'w-3 bg-white/40'
