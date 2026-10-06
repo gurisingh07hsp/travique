@@ -48,19 +48,17 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
           <div className="text-center lg:text-left">
-            <p className="text-sm text-gray-500 mb-3">All you need is MilkyWays</p>
+            <p className="text-sm text-gray-500 mb-3">All you need is MilkyWaysTours</p>
             <h1 className="text-[32px] sm:text-5xl lg:text-[56px] font-extrabold text-[#1a1a1a] leading-[1.12] tracking-tight">
-              Discover{' '}
+              Reliable Airport Transfers &{' '}
               <span className="relative inline-block">
-                Queenstown
+                Private Tours
                 <span className="absolute left-0 -bottom-1 h-[7px] w-full rounded-full bg-[#FF7528]/80" />
-              </span>
-              <br />
-              transfers and tours made simple.
+              </span>{' '}
+              Across New Zealand
             </h1>
             <p className="mt-5 text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Airport pickups, private day tours and comfortable vehicles across New Zealand — so you
-              can enjoy the scenery, not the logistics.
+              Experience the beauty of New Zealand with our professional and comfortable travel services.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
