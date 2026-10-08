@@ -22,13 +22,16 @@ export default function Footer() {
 
           {/* Social icons */}
           <div className="flex gap-3 mt-1">
-            {/* Twitter */}
+            {/* Facebook */}
             <a
-              href="#"
+              href="https://www.facebook.com/people/MilkyWays-Tours-Transfers/61594755947615/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="MilkyWays Tours on Facebook"
               className="w-9 h-9 rounded-full bg-main flex items-center justify-center hover:bg-amber-500 transition-colors"
             >
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.4V9.41c0-2.38 1.42-3.69 3.6-3.69 1.04 0 2.13.18 2.13.18v2.35h-1.2c-1.18 0-1.55.73-1.55 1.48v1.78h2.64l-.42 2.89h-2.22v6.99c4.78-.75 8.44-4.89 8.44-9.88z" />
               </svg>
             </a>
             {/* Instagram */}
