@@ -50,12 +50,7 @@ const HeroSection = () => {
           <div className="text-center lg:text-left">
             <p className="text-sm text-gray-500 mb-3">All you need is MilkyWaysTours</p>
             <h1 className="text-[32px] sm:text-5xl lg:text-[56px] font-extrabold text-[#1a1a1a] leading-[1.12] tracking-tight">
-              Reliable Airport Transfers &{' '}
-              <span className="relative inline-block">
-                Private Tours
-                <span className="absolute left-0 -bottom-1 h-[7px] w-full rounded-full bg-[#FF7528]/80" />
-              </span>{' '}
-              Across New Zealand
+              Reliable Airport Transfers & Private Tours Across New Zealand
             </h1>
             <p className="mt-5 text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
               Experience the beauty of New Zealand with our professional and comfortable travel services.
