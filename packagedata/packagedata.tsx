@@ -50,6 +50,26 @@ export const PackageData = [
         slug: 'castle-hill-day-tour-christchurch'
     },
     {
+        title: 'Hokitika Day Tour from Christchurch',
+        image: '/packageImages/franzGlacier.jpeg',
+        duration: 'Full Day',
+        description: 'A private Hokitika day tour from Christchurch via Arthur’s Pass. Explore Hokitika Gorge, rainforest treetop walks, pounamu culture and West Coast scenery.',
+        includes: ['Private transportation','Professional driver','Christchurch pickup','Scenic Arthur’s Pass journey','Flexible itinerary'],
+        bestFor: 'Couples, families, photographers and international travellers',
+        buttonText: 'Send Enquiry',
+        slug: 'hokitika-day-tour'
+    },
+    {
+        title: 'Kaikoura Day Tour from Christchurch',
+        image: '/packageImages/wanaka.jpeg',
+        duration: 'Full Day',
+        description: 'Plan a private Kaikoura day tour from Christchurch: whale watching, seal swim, coastal walk and crayfish lunch. Timings and tips from local drivers.',
+        includes: ['Door-to-door pickup and return','Professional driver','Flexible coastal stops','Transparent pricing'],
+        bestFor: 'Families, small groups and visitors wanting flexibility',
+        buttonText: 'Send Enquiry',
+        slug: 'kaikoura-day-tour-from-christchurch'
+    },
+    {
         title: 'Ski Field Transport',
         image: '/packageImages/SkiFieldTransport.png',
         duration: 'Daily Transfers',

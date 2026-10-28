@@ -114,6 +114,16 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
+                      <Link href="/hokitika-day-tour" className="block px-4 py-2 hover:bg-gray-100">
+                        Hokitika Day Tour from Christchurch
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/kaikoura-day-tour-from-christchurch" className="block px-4 py-2 hover:bg-gray-100">
+                        Kaikoura Day Tour from Christchurch
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/custom-south-island-package" className="block px-4 py-2 hover:bg-gray-100">
                         Custom South Island Package
                       </Link>
@@ -234,6 +244,16 @@ const Navbar = () => {
               <li>
                 <Link onClick={()=>setMobileOpen(false)} href="/castle-hill-day-tour-christchurch" className="text-sm font-medium text-muted-foreground hover:text-foreground">
                   Castle Hill Day Tour from Christchurch
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/hokitika-day-tour" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Hokitika Day Tour from Christchurch
+                </Link>
+              </li>
+              <li>
+                <Link onClick={()=>setMobileOpen(false)} href="/kaikoura-day-tour-from-christchurch" className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                  Kaikoura Day Tour from Christchurch
                 </Link>
               </li>
               <li>
